@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harpreet Kaur | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <div class="container nav-container">
+      <h2>My Portfolio</h2>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+       <button id="dark-mode-toggle">🌙</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+   <header>
+  <div class="container hero">
+    <img src="./myprofile.jpeg" alt="Harpreet Kaur" class="hero-photo">
+    <h1>Hi, I'm Harpreet Kaur</h1>
+    <p>Graduate IT Professional | Web Developer | Python | Cloud (AWS) | Database Design | IT Technician</p>
+    <a href="https://www.linkedin.com/in/harpreetkaur117/" class="btn">LinkedIn</a>
+    <a href="#projects" class="btn">View My Projects</a>
+    <a href="HarpreetKaur_2025.pdf" class="btn">Resume</a>
+  </div>
+</header>
+
+  
+
+  <!-- About Me Section -->
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+       <p>
+      I am a <strong>Master of Computer Science & IT</strong> student at Sacred Heart University (CT), 
+      specializing in <strong>cloud computing, advanced databases, and artificial intelligence</strong>. 
+      With a strong foundation in programming (C, C++, Java, Python, PHP, SQL, JavaScript, React.js) and 
+      hands-on IT support experience as a <strong>Graduate Assistant</strong>, I bring a balance of 
+      technical expertise and real-world problem-solving.
+    </p>
+    <p>
+      I have built projects in <strong>web development, cloud deployment, and AI problem-solving</strong> — 
+      including a React-based Student Grade Tracker, an E-Commerce Web App, and AI algorithms for 
+      the 8-puzzle problem. Beyond coding, I enjoy optimizing IT operations, writing support 
+      documentation, and collaborating on innovative solutions.
+    </p>
+    <p>
+      My goal is to leverage my <strong>cloud (AWS), full-stack development, and database design</strong> 
+      skills to create scalable, user-friendly, and impactful digital solutions.
+    </p>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill">Level 1 Support</div>
+        <div class="skill">End-user Assistance</div>
+        <div class="skill">Windows / macOS / Linux</div>
+        <div class="skill">Office 365 / Software Installation</div>
+        <div class="skill">Active Directory / Okta</div>
+        <div class="skill">TeamDynamix / Remote Tools</div>
+        <div class="skill">Networking (TCP/IP, DNS, DHCP)</div>
+        <div class="skill">Cloud Computing (AWS)</div>
+        <div class="skill">Python Programming</div>
+        <div class="skill">SQL Databases</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="project-filters">
+        <button class="filter-btn active" data-type="all">All</button>
+        <button class="filter-btn" data-type="sql">SQL</button>
+        <button class="filter-btn" data-type="python">Python</button>
+        <button class="filter-btn" data-type="cloud">Cloud</button>
+      </div>
+      <div class="project-grid" id="project-grid">
+        <!-- Projects will be added dynamically via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:kaurpreethar1208@gmail.com">kaurpreethar1208@gmail.com</a></p>
+      <p>Phone: (209) 998-3979</p>
+      <p>LinkedIn: <a href="#" target="_blank">Your LinkedIn</a></p>
+      <p>GitHub: <a href="#" target="_blank">Your GitHub</a></p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
