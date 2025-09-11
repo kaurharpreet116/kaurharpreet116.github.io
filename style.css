@@ -103,7 +103,7 @@ body.dark-mode .btn {
 
 /* Hero Section */
 header {
-  background: url("bg2.jpg") no-repeat center center/cover;
+  background: url("Header-Background.png") no-repeat center center/cover;
   color: #14141a;
   text-align: center;
   padding: 6rem 0;
@@ -450,5 +450,6 @@ section h2 {
 .contact-form button {
   align-self: flex-start;
 }
+
 
 
