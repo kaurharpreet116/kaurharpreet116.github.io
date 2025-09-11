@@ -1,63 +1,76 @@
-const projects = [
-  {
-    title: "SQL Employee Database",
-    description: "Created a fully normalized employee database with queries and stored procedures.",
-    link: "#",
-    type: "sql"
-  },
-  {
-    title: "Python Automation Script",
-    description: "Automated Excel report generation using Python and pandas.",
-    link: "#",
-    type: "python"
-  },
-  {
-    title: "Cloud Deployment Demo",
-    description: "Deployed a small Python app to AWS Lambda with API Gateway.",
-    link: "#",
-    type: "cloud"
-  },
-  {
-    title: "Advanced Data Structures",
-    description: "Implemented stack, queue, and linked lists projects in Python.",
-    link: "#",
-    type: "python"
-  },
-  {
-    title: "Networking Simulation",
-    description: "Configured DHCP, DNS, and VPN settings for virtual lab exercises.",
-    link: "#",
-    type: "cloud"
-  }
-];
+// Project Tabs
+const tabButtons = document.querySelectorAll(".tab-btn");
+const tabContents = document.querySelectorAll(".tab-content");
 
-const projectGrid = document.getElementById('project-grid');
-const filterButtons = document.querySelectorAll('.filter-btn');
+tabButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const target = btn.getAttribute("data-tab");
 
-// Function to render projects
-function renderProjects(filter = 'all') {
-  projectGrid.innerHTML = '';
-  const filtered = filter === 'all' ? projects : projects.filter(p => p.type === filter);
-  filtered.forEach(p => {
-    const card = document.createElement('div');
-    card.className = 'project-card';
-    card.innerHTML = `
-      <h3>${p.title}</h3>
-      <p>${p.description}</p>
-      <a href="${p.link}" target="_blank">View Project</a>
-    `;
-    projectGrid.appendChild(card);
-  });
-}
+    // Reset active states
+    tabButtons.forEach(b => b.classList.remove("active"));
+    tabContents.forEach(c => c.classList.remove("active"));
 
-// Filter button click
-filterButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    filterButtons.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    renderProjects(btn.dataset.type);
+    // Activate selected
+    btn.classList.add("active");
+    document.getElementById(target).classList.add("active");
   });
 });
 
-// Initial render
-renderProjects();
+// Dark mode toggle
+const toggleButton = document.getElementById("dark-mode-toggle");
+toggleButton.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+  toggleButton.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+});
+
+
+
+
+// Animate progress bars when they enter the viewport.
+// Uses IntersectionObserver with a simple fallback.
+
+(function () {
+  const bars = document.querySelectorAll('.progress-fill');
+  if (!bars.length) return;
+
+  function animateBar(bar) {
+    const level = parseInt(bar.dataset.level, 10) || 0;
+    bar.style.width = level + '%';
+
+    // animate number from 0 to level
+    let start = 0;
+    const duration = 900; // ms
+    const step = Math.max(1, Math.floor(duration / Math.max(level,1)));
+    const timer = setInterval(() => {
+      start++;
+      bar.textContent = start + '%';
+      if (start >= level) clearInterval(timer);
+    }, step);
+  }
+
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateBar(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.4 });
+
+    bars.forEach(bar => io.observe(bar));
+  } else {
+    // Fallback: animate on load and on scroll
+    const animateOnView = () => {
+      bars.forEach(bar => {
+        const rect = bar.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50 && rect.bottom >= 0 && bar.style.width === '0%') {
+          animateBar(bar);
+        }
+      });
+    };
+    window.addEventListener('load', animateOnView);
+    window.addEventListener('scroll', animateOnView);
+  }
+})();
+
