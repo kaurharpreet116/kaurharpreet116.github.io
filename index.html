@@ -1,113 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Harpreet Kaur | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <!-- Navbar -->
-  <nav>
-    <div class="container nav-container">
-      <h2>My Portfolio</h2>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-       <button id="dark-mode-toggle">🌙</button>
-    </div>
-  </nav>
-
-  <!-- Hero Section -->
-   <header>
-  <div class="container hero">
-    <img src="./myprofile.jpeg" alt="Harpreet Kaur" class="hero-photo">
-    <h1>Hi, I'm Harpreet Kaur</h1>
-    <p>Graduate IT Professional | Web Developer | Python | Cloud (AWS) | Database Design | IT Technician</p>
-    <a href="https://www.linkedin.com/in/harpreetkaur117/" class="btn">LinkedIn</a>
-    <a href="https://github.com/kaurharpreet116" class="btn">GitHub</a>
-    <a href="#projects" class="btn">View My Projects</a>
-    <a href="HarpreetKaur_2025.pdf" class="btn">Resume</a>
-  </div>
-</header>
-
-  
-
-  <!-- About Me Section -->
-  <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
-       <p>
-      I am a <strong>Master of Computer Science & IT</strong> student at Sacred Heart University (CT), 
-      specializing in <strong>cloud computing, advanced databases, and artificial intelligence</strong>. 
-      With a strong foundation in programming (C, C++, Java, Python, PHP, SQL, JavaScript, React.js) and 
-      hands-on IT support experience as a <strong>Graduate Assistant</strong>, I bring a balance of 
-      technical expertise and real-world problem-solving.
-    </p>
-    <p>
-      I have built projects in <strong>web development, cloud deployment, and AI problem-solving</strong> — 
-      including a React-based Student Grade Tracker, an E-Commerce Web App, and AI algorithms for 
-      the 8-puzzle problem. Beyond coding, I enjoy optimizing IT operations, writing support 
-      documentation, and collaborating on innovative solutions.
-    </p>
-    <p>
-      My goal is to leverage my <strong>cloud (AWS), full-stack development, and database design</strong> 
-      skills to create scalable, user-friendly, and impactful digital solutions.
-    </p>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills">
-    <div class="container">
-      <h2>Skills</h2>
-      <div class="skills-grid">
-        <div class="skill">Level 1 Support</div>
-        <div class="skill">End-user Assistance</div>
-        <div class="skill">Windows / macOS / Linux</div>
-        <div class="skill">Office 365 / Software Installation</div>
-        <div class="skill">Active Directory / Okta</div>
-        <div class="skill">TeamDynamix / Remote Tools</div>
-        <div class="skill">Networking (TCP/IP, DNS, DHCP)</div>
-        <div class="skill">Cloud Computing (AWS)</div>
-        <div class="skill">Python Programming</div>
-        <div class="skill">SQL Databases</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Harpreet Kaur | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="container nav-container">
+        <h2>My Portfolio</h2>
+        <ul>
+          <li><a href="#skill-projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#Certificates">Certifications</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button id="dark-mode-toggle">🌙</button>
       </div>
-    </div>
-  </section>
+    </nav>
 
-  <!-- Projects Section -->
-  <section id="projects">
-    <div class="container">
-      <h2>Projects</h2>
-      <div class="project-filters">
-        <button class="filter-btn active" data-type="all">All</button>
-        <button class="filter-btn" data-type="sql">SQL</button>
-        <button class="filter-btn" data-type="python">Python</button>
-        <button class="filter-btn" data-type="cloud">Cloud</button>
+    <!-- Hero Section -->
+    <header>
+      <div class="container hero">
+        <img src="Images/mypf.jpg" alt="Harpreet Kaur" class="hero-photo" />
+        <h1>Hi, I'm Harpreet Kaur</h1>
+        <p>
+          Graduate IT Professional | Web Developer | Python | Cloud (AWS) |
+          Database Design | IT Technician
+        </p>
+        <a href="HarpreetKaur_2025.pdf" class="btn">Resume</a>
+        <a href="https://www.linkedin.com/in/harpreetkaur117/" class="btn"
+          >LinkedIn</a
+        >
+        <a href="https://github.com/kaurharpreet116" class="btn">GitHub</a>
       </div>
-      <div class="project-grid" id="project-grid">
-        <!-- Projects will be added dynamically via JS -->
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>
+          I am a <strong>Master of Computer Science & IT</strong> student at
+          Sacred Heart University (CT), specializing in
+          <strong
+            >cloud computing, advanced databases, and artificial
+            intelligence</strong
+          >. With a strong foundation in programming (C, C++, Java, Python, PHP,
+          SQL, JavaScript, React.js) and hands-on IT support experience as a
+          <strong>Graduate Assistant</strong>, I bring a balance of technical
+          expertise and real-world problem-solving.
+        </p>
+        <p>
+          I have built projects in
+          <strong
+            >web development, cloud deployment, and AI problem-solving</strong
+          >
+          — including a React-based Student Grade Tracker, an E-Commerce Web
+          App, and AI algorithms for the 8-puzzle problem. Beyond coding, I
+          enjoy optimizing IT operations, writing support documentation, and
+          collaborating on innovative solutions.
+        </p>
+        <p>
+          My goal is to leverage my
+          <strong
+            >cloud (AWS), full-stack development, and database design</strong
+          >
+          skills to create scalable, user-friendly, and impactful digital
+          solutions.
+        </p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <p>Email: <a href="mailto:kaurpreethar1208@gmail.com">kaurpreethar1208@gmail.com</a></p>
-      <p>Phone: (209) 998-3979</p>
-      <p>LinkedIn: <a href="#" target="_blank">Your LinkedIn</a></p>
-      <p>GitHub: <a href="#" target="_blank">Your GitHub</a></p>
-    </div>
-  </section>
+    <!-- Skills Section -->
+    <section id="skills">
+      <div class="container">
+        <h2>Skills</h2>
 
-  <script src="script.js"></script>
-</body>
+        <!-- Programming -->
+        <div class="skill-category">
+          <h3>Programming</h3>
+          <div class="programming-grid">
+            <div class="prog-card">Python</div>
+            <div class="prog-card">JavaScript</div>
+            <div class="prog-card">TypeScript</div>
+            <div class="prog-card">PHP</div>
+            <div class="prog-card">C</div>
+            <div class="prog-card">C++</div>
+            <div class="prog-card">Java</div>
+            <div class="prog-card">SQL</div>
+            <div class="prog-card">HTML5</div>
+            <div class="prog-card">CSS3</div>
+          </div>
+        </div>
+
+        <!-- Frameworks, Tools & Software -->
+        <div class="skill-category">
+          <h3>Frameworks, Tools & Software</h3>
+          <div class="logo-grid">
+            <!-- Frameworks -->
+            <div class="logo-item">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                alt="React.js"
+              />
+              <span class="tooltip">React.js</span>
+            </div>
+            <div class="logo-item">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                alt="Bootstrap"
+              />
+              <span class="tooltip">Bootstrap</span>
+            </div>
+            <div class="logo-item">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+                alt="GitHub"
+              />
+              <span class="tooltip">GitHub</span>
+            </div>
+            <div class="logo-item">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
+                alt="VS Code"
+              />
+              <span class="tooltip">VS Code</span>
+            </div>
+            <div class="logo-item">
+              <img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/okta/okta-original.svg"
+                alt="Okta"
+              />
+              <span class="tooltip">Okta</span>
+            </div>
+
+            <!-- Microsoft Office Apps -->
+            <div class="logo-item">
+              <img src="images/word.jpeg" alt="MS Word" />
+              <span class="tooltip">MS Word</span>
+            </div>
+            <div class="logo-item">
+              <img src="images/excel.png" alt="MS Excel" />
+              <span class="tooltip">MS Excel</span>
+            </div>
+            <div class="logo-item">
+              <img src="images/powerpoint.jpeg" alt="MS PowerPoint" />
+              <span class="tooltip">MS PowerPoint</span>
+            </div>
+            <div class="logo-item">
+              <img src="images/outlook.jpeg" alt="MS Outlook" />
+              <span class="tooltip">MS Outlook</span>
+            </div>
+            <div class="logo-item">
+              <img src="images/teams.jpeg" alt="MS Teams" />
+              <span class="tooltip">MS Teams</span>
+            </div>
+            <div class="logo-item">
+              <img src="images/onenote.png" alt="MS OneNote" />
+              <span class="tooltip">MS OneNote</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cloud & Databases -->
+        <div class="progress-skill">
+          <span>AWS</span>
+          <div class="progress">
+            <div class="progress-fill" data-level="70">0%</div>
+          </div>
+        </div>
+
+        <div class="progress-skill">
+          <span>MySQL</span>
+          <div class="progress">
+            <div class="progress-fill" data-level="85">85%</div>
+          </div>
+        </div>
+
+        <div class="progress-skill">
+          <span>Database Design</span>
+          <div class="progress">
+            <div class="progress-fill" data-level="80">80%</div>
+          </div>
+        </div>
+
+        <div class="progress-skill">
+          <span>Data Warehousing</span>
+          <div class="progress">
+            <div class="progress-fill" data-level="75">75%</div>
+          </div>
+        </div>
+
+        <!-- Concepts -->
+        <div class="skill-category">
+          <h3>Concepts</h3>
+          <div class="concept-grid">
+            <div class="concept-card">OOP</div>
+            <div class="concept-card">Data Structures</div>
+            <div class="concept-card">SDLC</div>
+            <div class="concept-card">UX/UI</div>
+            <div class="concept-card">Software Testing</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Showcase Section -->
+    <section id="skill-projects">
+      <div class="container">
+        <h2>Project Showcase</h2>
+
+        <div class="project-tabs">
+          <button class="tab-btn active" data-tab="vbnet">VB.NET</button>
+          <button class="tab-btn" data-tab="software">
+            Software / Websites
+          </button>
+          <button class="tab-btn" data-tab="cloud">Cloud</button>
+          <button class="tab-btn" data-tab="ai">Artificial Intelligence</button>
+          <button class="tab-btn" data-tab="it">IT Technician</button>
+        </div>
+
+        <div class="tab-content active" id="vbnet">
+          <div class="project-card">
+            <h3>Employee Management System</h3>
+            <p>
+              Developed a VB.NET system for managing employee records, payroll,
+              and reports.
+            </p>
+          </div>
+          <div class="project-card">
+            <h3>Inventory Tracking</h3>
+            <p>
+              Desktop app with SQL integration for product tracking and billing.
+            </p>
+          </div>
+        </div>
+
+        <div class="tab-content" id="software">
+          <div class="project-card">
+            <h3>Student Grade Tracker (React.js)</h3>
+            <p>
+              A web app for tracking student grades dynamically using React and
+              SQL.
+            </p>
+          </div>
+          <div class="project-card">
+            <h3>E-Commerce Website</h3>
+            <p>
+              Full-stack web application with product catalog, shopping cart,
+              and payment gateway.
+            </p>
+          </div>
+        </div>
+
+        <div class="tab-content" id="cloud">
+          <div class="project-card">
+            <h3>AWS Deployment</h3>
+            <p>
+              Hosted a static website on AWS S3 with Route 53, CloudFront, and
+              Lambda functions.
+            </p>
+          </div>
+          <div class="project-card">
+            <h3>Data Pipeline</h3>
+            <p>
+              Built ETL pipeline using AWS Glue, Redshift, and S3 for data
+              analytics.
+            </p>
+          </div>
+        </div>
+
+        <div class="tab-content" id="ai">
+          <div class="project-card">
+            <h3>8-Puzzle Solver</h3>
+            <p>
+              Implemented AI algorithms (A*, BFS, DFS) to solve puzzle
+              optimization problems.
+            </p>
+          </div>
+          <div class="project-card">
+            <h3>Handwriting Recognition</h3>
+            <p>
+              Trained ML models for recognizing handwritten digits with 95%
+              accuracy.
+            </p>
+          </div>
+        </div>
+
+        <div class="tab-content" id="it">
+          <div class="project-card">
+            <h3>Summer Laptop Refresh | Sacred Heart University</h3>
+            <p>
+              Assisted faculty and staff with the setup, imaging, and
+              configuration of new laptops during the university’s Summer Laptop
+              Refresh program. Managed support tickets through TeamDynamix to
+              ensure accurate tracking and timely resolution, while verifying
+              returned devices, updating inventory records, and maintaining
+              proper asset management. Guided users through software
+              installation and account setup for a seamless transition, and
+              collaborated with IT teams to streamline workflows—improving both
+              efficiency and end-user satisfaction.
+            </p>
+          </div>
+          <div class="project-card">
+            <h3>System Troubleshooting</h3>
+            <p>
+              Resolved software, hardware, and network issues as part of IT
+              helpdesk role.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <div class="contact-grid">
+          <!-- Contact Info -->
+          <div class="contact-info">
+            <p>
+              Let's connect! Feel free to reach out via email or social links
+              below.
+            </p>
+            <div class="social-links">
+              <a
+                href="mailto:kaurpreethar1208@gmail.com"
+                target="_blank"
+                class="contact-icon"
+                >📧</a
+              >
+              <a
+                href="https://www.linkedin.com/in/harpreetkaur117/"
+                target="_blank"
+                class="contact-icon"
+                >💼</a
+              >
+              <a
+                href="https://github.com/kaurharpreet116"
+                target="_blank"
+                class="contact-icon"
+                >🐙</a
+              >
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <form class="contact-form">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
 </html>
-
