@@ -17,11 +17,22 @@ tabButtons.forEach(btn => {
 });
 
 // Dark mode toggle
-const toggleButton = document.getElementById("dark-mode-toggle");
-toggleButton.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
-  toggleButton.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+const toggleButton = document.getElementById('dark-mode-toggle');
+
+// Default: enable dark mode
+document.body.classList.add('dark-mode');
+toggleButton.textContent = '☀️';
+
+toggleButton.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  
+  if (document.body.classList.contains('dark-mode')) {
+    toggleButton.textContent = '☀️';
+  } else {
+    toggleButton.textContent = '🌙';
+  }
 });
+
 
 
 
@@ -73,4 +84,6 @@ toggleButton.addEventListener("click", () => {
     window.addEventListener('scroll', animateOnView);
   }
 })();
+
+
 
