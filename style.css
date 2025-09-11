@@ -104,7 +104,7 @@ body.dark-mode .btn {
 
 /* Hero Section */
 header {
-  background: url("Images/Header-Background.png") no-repeat center center/cover;
+  background: url("Header-Background.png") no-repeat center center/cover;
   color: #14141a;
   text-align: center;
   padding: 6rem 0;
@@ -531,3 +531,4 @@ body.dark-mode .cert-card p {
 .contact-form button {
   align-self: flex-start;
 }
+
