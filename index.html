@@ -1,430 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Harpreet Kaur | Portfolio</title>
+    <title>Harpreet Kaur | Software Engineer Portfolio</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body class = "dark-mode">
-    <!-- Navbar -->
+</head>
+<body class="dark-mode">
     <nav>
-      <div class="container nav-container">
-        <h2>My Portfolio</h2>
-        <ul>
-          <li><a href="#skill-projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#Certificates">Certifications</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <button id="dark-mode-toggle">🌙</button>
-      </div>
+        <div class="container nav-container">
+            <h2>Harpreet Kaur</h2>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#skill-projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="dark-mode-toggle">🌙</button>
+        </div>
     </nav>
 
-    <!-- Hero Section -->
     <header>
-      <div class="container hero">
-        <img src="mypf.jpg" alt="Harpreet Kaur" class="hero-photo" />
-        <h1>Hi, I'm Harpreet Kaur</h1>
-        <p>
-          Graduate IT Professional | IT Technician | Web Developer |  Database Design | QA | AWS          | 
-        </p>
-        <a href="HarpreetKaur_2025.pdf" class="btn">Resume</a>
-        <a href="https://www.linkedin.com/in/harpreetkaur117/" class="btn"
-          >LinkedIn</a
-        >
-        <a href="https://github.com/kaurharpreet116" class="btn">GitHub</a>
-      </div>
+        <div class="container hero">
+            <img src="mypf.jpg" alt="Harpreet Kaur" class="hero-photo" />
+            <h1>Hi, I'm Harpreet Kaur</h1>
+            <p>
+                <strong>Software Engineer & University Gold Medalist</strong><br>
+                Specializing in Full-Stack Development, AI/Object Detection, and Automation.
+            </p>
+            <div class="hero-btns">
+                <a href="HarpreetKaurResume.pdf" class="btn">Download Resume</a>
+                <a href="https://www.linkedin.com/in/harpreetkaur117/" class="btn" target="_blank">LinkedIn</a>
+                <a href="https://github.com/kaurharpreet116" class="btn" target="_blank">GitHub</a>
+            </div>
+        </div>
     </header>
 
-    <!-- About Me Section -->
     <section id="about">
-      <div class="container about-content">
-        <h2>About Me</h2>
-        <p>
-         I’m Harpreet, a Master’s student in Computer Science & IT with a curious mind and big dreams. Moving to the U.S. for my studies has taught me resilience, adaptability, and the value of consistency. I’m passionate about problem-solving, exploring cloud technologies, web development, and databases, and I enjoy turning ideas into real solutions that make life easier and more meaningful.
-
-For me, success doesn’t come overnight — it’s about showing up every day, learning, and growing a little at a time. I believe in improving 1% each day, staying positive, and turning challenges into opportunities. Beyond the tech world, I enjoy connecting with people, sharing ideas, and creating opportunities for growth as I move closer to building a career that blends passion with impact. </p>
-      </div>
-
-     
+        <div class="container about-content">
+            <h2>Professional Summary</h2>
+            <p>
+                I am a Software Engineer with a Master's in Computer Science (3.9 GPA) and a passion for building scalable, secure applications. 
+                I specialize in <strong>offline-first mobile architectures</strong> and <strong>AI-driven object detection</strong>. 
+                Whether it's automating enterprise workflows or architecting cross-platform apps with React Native and FastAPI, 
+                I focus on turning complex problems into seamless user experiences. [cite: 4, 5, 6]
+            </p>
+        </div>
     </section>
 
-    <!-- Skills Section -->
+    <section id="experience">
+        <div class="container">
+            <h2>Work Experience</h2>
+            <div class="experience-item">
+                <h3>Graduate Assistant – Systems & Software Automation</h3>
+                <p><strong>Sacred Heart University, Fairfield, CT</strong> | Jan 2025 – Dec 2025</p>
+                <ul>
+                    <li>Engineered PowerShell scripts to automate system configurations for 1,000+ users, reducing manual processing by 40%. [cite: 15]</li>
+                    <li>Managed enterprise integration for Okta and Office 365, ensuring seamless SSO across university infrastructure. [cite: 16]</li>
+                    <li>Performed SQL database diagnostics via Team Dynamix (TDX) to resolve systemic data discrepancies. [cite: 17]</li>
+                    <li>Collaborated with IT Security on vulnerability assessments and automated patch management. [cite: 21]</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <section id="skills">
-      <div class="container">
-        <h2>Skills</h2>
-
-        <!-- Programming -->
-        <div class="skill-category">
-          <h3>Programming</h3>
-          <div class="programming-grid">
-            <div class="prog-card">Python</div>
-            <div class="prog-card">JavaScript</div>
-            <div class="prog-card">TypeScript</div>
-            <div class="prog-card">Python</div>
-            <div class="prog-card">PHP</div>
-            <div class="prog-card">C</div>
-            <div class="prog-card">C++</div>
-            <div class="prog-card">Java</div>
-            <div class="prog-card">SQL</div>
-            <div class="prog-card">HTML5</div>
-            <div class="prog-card">CSS3</div>
-          </div>
-        </div>
-
-        <!-- Frameworks, Tools & Software -->
-        <div class="skill-category">
-          <h3>Frameworks, Tools & Software</h3>
-          <div class="logo-grid">
-            <!-- Frameworks -->
-            <div class="logo-item">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                alt="React.js"
-              />
-              <span class="tooltip">React.js</span>
-            </div>
-            <div class="logo-item">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
-                alt="Bootstrap"
-              />
-              <span class="tooltip">Bootstrap</span>
-            </div>
-            <div class="logo-item">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-                alt="GitHub"
-              />
-              <span class="tooltip">GitHub</span>
-            </div>
-            <div class="logo-item">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"
-                alt="VS Code"
-              />
-              <span class="tooltip">VS Code</span>
-            </div>
-            <div class="logo-item">
-              <img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/okta/okta-original.svg"
-                alt="Okta"
-              />
-              <span class="tooltip">Okta</span>
+        <div class="container">
+            <h2>Technical Skills</h2>
+            <div class="skill-category">
+                <h3>Languages</h3>
+                <div class="programming-grid">
+                    <div class="prog-card">Python (FastAPI, PyTorch)</div>
+                    <div class="prog-card">JavaScript (ES6+)</div>
+                    <div class="prog-card">TypeScript</div>
+                    <div class="prog-card">Java</div>
+                    <div class="prog-card">SQL</div>
+                    <div class="prog-card">PowerShell</div>
+                </div>
             </div>
 
-            <!-- Microsoft Office Apps -->
-            <div class="logo-item">
-              <img src="word.jpeg" alt="MS Word" />
-              <span class="tooltip">MS Word</span>
+            <div class="skill-category">
+                <h3>Frameworks & Cloud</h3>
+                <div class="logo-grid">
+                    <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Native" /><span class="tooltip">React Native</span></div>
+                    <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" /><span class="tooltip">Node.js</span></div>
+                    <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg" alt="Electron" /><span class="tooltip">Electron</span></div>
+                    <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" /><span class="tooltip">PostgreSQL</span></div>
+                    <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS" /><span class="tooltip">AWS</span></div>
+                </div>
             </div>
-            <div class="logo-item">
-              <img src="excel.png" alt="MS Excel" />
-              <span class="tooltip">MS Excel</span>
-            </div>
-            <div class="logo-item">
-              <img src="powerpoint.jpeg" alt="MS PowerPoint" />
-              <span class="tooltip">MS PowerPoint</span>
-            </div>
-            <div class="logo-item">
-              <img src="outlook.jpeg" alt="MS Outlook" />
-              <span class="tooltip">MS Outlook</span>
-            </div>
-            <div class="logo-item">
-              <img src="teams.jpeg" alt="MS Teams" />
-              <span class="tooltip">MS Teams</span>
-            </div>
-            <div class="logo-item">
-              <img src="onenote.png" alt="MS OneNote" />
-              <span class="tooltip">MS OneNote</span>
-            </div>
-          </div>
         </div>
-        <!-- Cloud & Databases -->
-        <div class="progress-skill">
-          <span>AWS</span>
-          <div class="progress">
-            <div class="progress-fill" data-level="70">0%</div>
-          </div>
-        </div>
-
-        <div class="progress-skill">
-          <span>MySQL</span>
-          <div class="progress">
-            <div class="progress-fill" data-level="85">85%</div>
-          </div>
-        </div>
-
-        <div class="progress-skill">
-          <span>Database Design</span>
-          <div class="progress">
-            <div class="progress-fill" data-level="80">80%</div>
-          </div>
-        </div>
-
-        <div class="progress-skill">
-          <span>Data Warehousing</span>
-          <div class="progress">
-            <div class="progress-fill" data-level="75">75%</div>
-          </div>
-        </div>
-
-        <!-- Concepts -->
-        <div class="skill-category">
-          <h3>Concepts</h3>
-          <div class="concept-grid">
-            <div class="concept-card">OOP</div>
-             <div class="concept-card">Artificial Intelligence</div>
-            <div class="concept-card">Data Structures</div>
-            <div class="concept-card">SDLC</div>
-             <div class="concept-card">Agile Methodology</div>
-            <div class="concept-card">UX/UI</div>
-            <div class="concept-card">Software Testing</div>
-             <div class="concept-card">Data Analysis</div>
-          </div>
-        </div>
-      </div>
     </section>
 
-    <!-- Project Showcase Section -->
     <section id="skill-projects">
-      <div class="container">
-        <h2>Project Showcase</h2>
-
-        <div class="project-tabs">
-           <button class="tab-btn active" data-tab="sql">SQL</button>
-          <button class="tab-btn" data-tab="vbnet">VB.NET</button>
-          <button class="tab-btn" data-tab="software">
-            Software / Websites
-          </button>
-          <button class="tab-btn" data-tab="cloud">Cloud</button>
-          <button class="tab-btn" data-tab="ai">Artificial Intelligence</button>
-          <button class="tab-btn" data-tab="it">IT Technician</button>
-        </div>
-
-        
-
-
-             <div class="tab-content active " id="sql">
-          <div class="project-card">
-            <h3>E-Commerce SQL Database</h3>
-            <p>
-            Designed an SQL-based e-commerce database with analytics on revenue, products, and customer behavior.
-            </p>
-             <a href="https://github.com/kaurharpreet116/ecommerce-sql" target="_blank">
-      🔗 View on GitHub </a>
-            
-          </div>
-          <div class="project-card">
-            <h3>SQL2</h3>
-            <p>
-             SQL2
-            </p>
-          </div>
-        </div>
-
-
-           
-
-           
-        <div class="tab-content " id="vbnet">  
-          <div class="project-card">
-            <h3>Employee Management System</h3>
-            <p>
-              Developed a VB.NET system for managing employee records, payroll,
-              and reports.
-            </p>
-
-
-          </div>
-          <div class="project-card">
-            <h3>Inventory Tracking</h3>
-            <p>
-              Desktop app with SQL integration for product tracking and billing.
-            </p>
-          </div>
-        </div>
-
-        <div class="tab-content" id="software">
-          <div class="project-card">
-            <h3>Student Grade Tracker (React.js)</h3>
-            <p>
-              A web app for tracking student grades dynamically using React and
-              SQL.
-            </p>
-          </div>
-          <div class="project-card">
-            <h3>E-Commerce Website</h3>
-            <p>
-              Full-stack web application with product catalog, shopping cart,
-              and payment gateway.
-            </p>
-          </div>
-        </div>
-
-        <div class="tab-content" id="cloud">
-          <div class="project-card">
-            <h3>AWS Deployment</h3>
-            <p>
-              Hosted a static website on AWS S3 with Route 53, CloudFront, and
-              Lambda functions.
-            </p>
-          </div>
-          <div class="project-card">
-            <h3>Data Pipeline</h3>
-            <p>
-              Built ETL pipeline using AWS Glue, Redshift, and S3 for data
-              analytics.
-            </p>
-          </div>
-        </div>
-
-        <div class="tab-content" id="ai">
-          <div class="project-card">
-            <h3>8-Puzzle Solver </h3>
-            <p>
-              Implemented AI algorithms (A*, BFS, DFS) to solve puzzle
-              optimization problems.
-            </p>
-              <a href="https://github.com/kaurharpreet116/8-Puzzle-Solver-with-A-Search-Algorithm" target="_blank">
-      🔗 View on GitHub </a>
-          </div>
-          <div class="project-card">
-            <h3>Handwriting Recognition</h3>
-            <p>
-              Trained ML models for recognizing handwritten digits with 95%
-              accuracy.
-            </p>
-          </div>
-        </div>
-
-        <div class="tab-content" id="it">
-          <div class="project-card">
-            <h3>Summer Laptop Refresh | Sacred Heart University</h3>
-            <p>
-              Assisted faculty and staff with the setup, imaging, and
-              configuration of new laptops during the university’s Summer Laptop
-              Refresh program. Managed support tickets through TeamDynamix to
-              ensure accurate tracking and timely resolution, while verifying
-              returned devices, updating inventory records, and maintaining
-              proper asset management. Guided users through software
-              installation and account setup for a seamless transition, and
-              collaborated with IT teams to streamline workflows—improving both
-              efficiency and end-user satisfaction.
-            </p>
-          </div>
-          <div class="project-card">
-            <h3>System Troubleshooting</h3>
-            <p>
-              Resolved software, hardware, and network issues as part of IT
-              helpdesk role.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Certifications Section -->
-    <section id="Certificates">
-      <div class="container">
-        <h2>Certifications</h2>
-
-        <div class="cert-grid">
-          <div class="cert-card">
-            <img
-              src="advance_dataStrcute.png"
-              alt="Advance Data Structures"
-            />
-            <p>Advance Data Structures</p>
-          </div>
-          <div class="cert-card">
-            <img src="oracle_Certificate.png" alt="oracle_Certificate" />
-            <p>oracle_Certificate</p>
-          </div>
-          <div class="cert-card">
-            <img src="cloud_computing.png" alt="cloud_computing" />
-            <p>Cloud Computing</p>
-          </div>
-          <div class="cert-card">
-            <img src="Web_Technology.png" alt="Web_Technology" />
-            <p>Web Technology</p>
-          </div>
-          <div class="cert-card">
-            <img src="Computer_Networks.png" alt="Computer_Networks" />
-            <p>Computer Networks</p>
-          </div>
-          <div class="cert-card">
-            <img
-              src="Big_Data_UsingHadoop.png"
-              alt="BIG DATA using Hadoop"
-            />
-            <p>Web Development</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-      <div class="container">
-        <h2>Contact Me</h2>
-        <div class="contact-grid">
-          <!-- Contact Info -->
-          <div class="contact-info">
-            <p>
-              Let's connect! Feel free to reach out via email or social links
-              below.
-            </p>
-            <div class="social-links">
-              <a
-                href="mailto:kaurpreethar1208@gmail.com"
-                target="_blank"
-                class="contact-icon"
-                >📧</a
-              >
-              <a
-                href="https://www.linkedin.com/in/harpreetkaur117/"
-                target="_blank"
-                class="contact-icon"
-                >💼</a
-              >
-              <a
-                href="https://github.com/kaurharpreet116"
-                target="_blank"
-                class="contact-icon"
-                >🐙</a
-              >
+        <div class="container">
+            <h2>Engineering Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <h3>Orbit - Offline-First Suite</h3>
+                    <p>React Native, FastAPI, PostgreSQL</p>
+                    <p>Architected a custom Sync Engine with "Last-Write-Wins" conflict resolution and local SQLite persistence for 100% offline uptime. [cite: 24]</p>
+                </div>
+                <div class="project-card">
+                    <h3>In-Cabin Object Detection</h3>
+                    <p>Python, YOLOv8, PyTorch</p>
+                    <p>Developed a CV pipeline comparing 5 architectures, achieving 55.70% mAP for synthetic interior occupancy detection. [cite: 27]</p>
+                </div>
+                <div class="project-card">
+                    <h3>Overlay Assistant</h3>
+                    <p>Electron, Node.js, JavaScript</p>
+                    <p>Desktop utility with global OS-level hotkeys and privacy features to prevent window capture during recordings. [cite: 30, 31]</p>
+                </div>
             </div>
-          </div>
-
-          <!-- Contact Form -->
-          <form class="contact-form">
-            <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Your Email" required />
-            <textarea rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit" class="btn">Send Message</button>
-          </form>
         </div>
-      </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2>Education</h2>
+            <div class="edu-item">
+                <h3>M.S. in Computer Science & IT (GPA 3.9/4.0)</h3>
+                <p>Sacred Heart University, CT | 2024 - 2025</p>
+            </div>
+            <div class="edu-item">
+                <h3>Master of Computer Applications (Gold Medalist)</h3>
+                <p>IK Gujral PTU, India | 2018 - 2020</p>
+            </div>
+            <div class="edu-item">
+                <h3>Bachelor of Computer Applications (University Topper)</h3>
+                <p>Guru Nanak Dev University, India | 2015 - 2018</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p>Open for Software Engineering opportunities and technical collaborations.</p>
+                    <div class="social-links">
+                        <a href="mailto:kaurpreethar1208@gmail.com" class="contact-icon">📧</a>
+                        <a href="https://www.linkedin.com/in/harpreetkaur117/" target="_blank" class="contact-icon">💼</a>
+                        <a href="https://github.com/kaurharpreet116" target="_blank" class="contact-icon">🐙</a>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Your Name" required />
+                    <input type="email" placeholder="Your Email" required />
+                    <textarea rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </div>
     </section>
 
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
