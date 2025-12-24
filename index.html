@@ -1,162 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Harpreet Kaur | Software Engineer Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harpreet Kaur | Software Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #38bdf8;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+
+        /* Navigation */
+        nav { padding: 2rem 0; display: flex; justify-content: space-between; align-items: center; }
+        nav h2 { margin: 0; font-size: 1.2rem; letter-spacing: 1px; color: var(--accent); }
+        nav ul { list-style: none; display: flex; gap: 20px; padding: 0; }
+        nav a { color: var(--text-dim); text-decoration: none; transition: 0.3s; font-size: 0.9rem; }
+        nav a:hover { color: var(--accent); }
+
+        /* Hero */
+        header { padding: 4rem 0; text-align: left; }
+        .hero-title { font-size: 3rem; margin: 0; }
+        .hero-subtitle { color: var(--accent); font-size: 1.1rem; font-weight: 500; margin-bottom: 1rem; display: block; }
+        .hero-desc { max-width: 600px; color: var(--text-dim); font-size: 1.1rem; }
+
+        /* Section Styling */
+        section { padding: 4rem 0; border-top: 1px solid #334155; }
+        h2 { font-size: 1.8rem; margin-bottom: 2rem; color: var(--text-main); }
+
+        /* Cards */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .card { background: var(--card-bg); padding: 25px; border-radius: 12px; transition: transform 0.3s; border: 1px solid transparent; }
+        .card:hover { transform: translateY(-5px); border-color: var(--accent); }
+        .card h3 { margin-top: 0; color: var(--accent); font-size: 1.2rem; }
+        .card p { color: var(--text-dim); font-size: 0.9rem; margin-bottom: 0; }
+        .tech-stack { font-size: 0.8rem; font-family: monospace; color: var(--accent); margin-top: 10px; display: block; }
+
+        /* Skills Badges */
+        .skills-wrap { display: flex; flex-wrap: wrap; gap: 10px; }
+        .skill-badge { background: #334155; padding: 5px 15px; border-radius: 20px; font-size: 0.85rem; color: #e2e8f0; }
+
+        /* Contact Section */
+        .contact-box { background: var(--card-bg); padding: 30px; border-radius: 12px; text-align: center; border: 1px dashed var(--accent); }
+        .contact-info-item { margin: 10px 0; font-size: 1.1rem; }
+        .contact-label { color: var(--accent); font-weight: bold; font-family: monospace; margin-right: 10px; }
+
+        .btn { display: inline-block; margin-top: 20px; padding: 10px 25px; background: var(--accent); color: #000; text-decoration: none; border-radius: 5px; font-weight: bold; }
+    </style>
 </head>
-<body class="dark-mode">
-    <nav>
-        <div class="container nav-container">
-            <h2>Harpreet Kaur</h2>
+<body>
+
+    <div class="container">
+        <nav>
+            <h2>HK.</h2>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#skill-projects">Projects</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button id="dark-mode-toggle">🌙</button>
-        </div>
-    </nav>
+        </nav>
 
-    <header>
-        <div class="container hero">
-            <img src="mypf.jpg" alt="Harpreet Kaur" class="hero-photo" />
-            <h1>Hi, I'm Harpreet Kaur</h1>
-            <p>
-                <strong>Software Engineer & University Gold Medalist</strong><br>
-                Specializing in Full-Stack Development, AI/Object Detection, and Automation.
+        <header>
+            <span class="hero-subtitle">Software Engineer & University Gold Medalist</span>
+            <h1 class="hero-title">Harpreet Kaur</h1>
+            <p class="hero-desc">
+                Specialist in full-stack development, offline-first mobile architectures, and AI-driven object detection[cite: 5]. 
+                Expert in building scalable applications with Python, React Native, and SQL[cite: 6].
             </p>
-            <div class="hero-btns">
-                <a href="HarpreetKaurResume.pdf" class="btn">Download Resume</a>
-                <a href="https://www.linkedin.com/in/harpreetkaur117/" class="btn" target="_blank">LinkedIn</a>
-                <a href="https://github.com/kaurharpreet116" class="btn" target="_blank">GitHub</a>
-            </div>
-        </div>
-    </header>
+            <a href="mailto:kaurpreethar1208@gmail.com" class="btn">Get in Touch</a>
+        </header>
 
-    <section id="about">
-        <div class="container about-content">
-            <h2>Professional Summary</h2>
-            <p>
-                I am a Software Engineer with a Master's in Computer Science (3.9 GPA) and a passion for building scalable, secure applications. 
-                I specialize in <strong>offline-first mobile architectures</strong> and <strong>AI-driven object detection</strong>. 
-                Whether it's automating enterprise workflows or architecting cross-platform apps with React Native and FastAPI, 
-                I focus on turning complex problems into seamless user experiences. [cite: 4, 5, 6]
-            </p>
-        </div>
-    </section>
-
-    <section id="experience">
-        <div class="container">
-            <h2>Work Experience</h2>
-            <div class="experience-item">
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            <div class="card" style="width: 100%; box-sizing: border-box;">
                 <h3>Graduate Assistant – Systems & Software Automation</h3>
-                <p><strong>Sacred Heart University, Fairfield, CT</strong> | Jan 2025 – Dec 2025</p>
-                <ul>
-                    <li>Engineered PowerShell scripts to automate system configurations for 1,000+ users, reducing manual processing by 40%. [cite: 15]</li>
-                    <li>Managed enterprise integration for Okta and Office 365, ensuring seamless SSO across university infrastructure. [cite: 16]</li>
-                    <li>Performed SQL database diagnostics via Team Dynamix (TDX) to resolve systemic data discrepancies. [cite: 17]</li>
-                    <li>Collaborated with IT Security on vulnerability assessments and automated patch management. [cite: 21]</li>
+                <p><strong>Sacred Heart University</strong> | Jan 2025 – Dec 2025 [cite: 12, 14]</p>
+                <ul style="color: var(--text-dim); font-size: 0.9rem;">
+                    <li>Engineered PowerShell scripts to automate system configurations for 1,000+ users[cite: 15].</li>
+                    <li>Integrated enterprise software suites like Okta and Office 365 for seamless SSO[cite: 16].</li>
+                    <li>Resolved systemic data discrepancies via SQL database queries and diagnostics[cite: 17].</li>
                 </ul>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="skills">
-        <div class="container">
-            <h2>Technical Skills</h2>
-            <div class="skill-category">
-                <h3>Languages</h3>
-                <div class="programming-grid">
-                    <div class="prog-card">Python (FastAPI, PyTorch)</div>
-                    <div class="prog-card">JavaScript (ES6+)</div>
-                    <div class="prog-card">TypeScript</div>
-                    <div class="prog-card">Java</div>
-                    <div class="prog-card">SQL</div>
-                    <div class="prog-card">PowerShell</div>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <h3>Frameworks & Cloud</h3>
-                <div class="logo-grid">
-                    <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Native" /><span class="tooltip">React Native</span></div>
-                    <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" /><span class="tooltip">Node.js</span></div>
-                    <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg" alt="Electron" /><span class="tooltip">Electron</span></div>
-                    <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" /><span class="tooltip">PostgreSQL</span></div>
-                    <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS" /><span class="tooltip">AWS</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skill-projects">
-        <div class="container">
+        <section id="projects">
             <h2>Engineering Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>Orbit - Offline-First Suite</h3>
-                    <p>React Native, FastAPI, PostgreSQL</p>
-                    <p>Architected a custom Sync Engine with "Last-Write-Wins" conflict resolution and local SQLite persistence for 100% offline uptime. [cite: 24]</p>
+            <div class="grid">
+                <div class="card">
+                    <h3>Orbit</h3>
+                    <p>Cross-platform mobile app featuring a custom Sync Engine with "Last-Write-Wins" conflict resolution[cite: 23, 24].</p>
+                    <span class="tech-stack">React Native • FastAPI • PostgreSQL</span>
                 </div>
-                <div class="project-card">
-                    <h3>In-Cabin Object Detection</h3>
-                    <p>Python, YOLOv8, PyTorch</p>
-                    <p>Developed a CV pipeline comparing 5 architectures, achieving 55.70% mAP for synthetic interior occupancy detection. [cite: 27]</p>
+                <div class="card">
+                    <h3>SVIRO Object Detection</h3>
+                    <p>Multi-model computer vision pipeline achieving 55.70% mAP@50 for interior occupancy detection[cite: 26, 27].</p>
+                    <span class="tech-stack">Python • YOLOv8 • PyTorch</span>
                 </div>
-                <div class="project-card">
+                <div class="card">
                     <h3>Overlay Assistant</h3>
-                    <p>Electron, Node.js, JavaScript</p>
-                    <p>Desktop utility with global OS-level hotkeys and privacy features to prevent window capture during recordings. [cite: 30, 31]</p>
+                    <p>Desktop utility with global OS-level hotkeys and specialized security features to prevent window capture[cite: 29, 30, 31].</p>
+                    <span class="tech-stack">Electron • Node.js • JavaScript</span>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="education">
-        <div class="container">
-            <h2>Education</h2>
-            <div class="edu-item">
-                <h3>M.S. in Computer Science & IT (GPA 3.9/4.0)</h3>
-                <p>Sacred Heart University, CT | 2024 - 2025</p>
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <div class="skills-wrap">
+                <div class="skill-badge">Python (FastAPI, PyTorch) [cite: 8]</div>
+                <div class="skill-badge">React Native [cite: 9]</div>
+                <div class="skill-badge">PostgreSQL [cite: 9]</div>
+                <div class="skill-badge">PowerShell [cite: 8]</div>
+                <div class="skill-badge">TypeScript [cite: 8]</div>
+                <div class="skill-badge">AWS [cite: 9]</div>
+                <div class="skill-badge">AI/Object Detection [cite: 10]</div>
             </div>
-            <div class="edu-item">
-                <h3>Master of Computer Applications (Gold Medalist)</h3>
-                <p>IK Gujral PTU, India | 2018 - 2020</p>
-            </div>
-            <div class="edu-item">
-                <h3>Bachelor of Computer Applications (University Topper)</h3>
-                <p>Guru Nanak Dev University, India | 2015 - 2018</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <p>Open for Software Engineering opportunities and technical collaborations.</p>
-                    <div class="social-links">
-                        <a href="mailto:kaurpreethar1208@gmail.com" class="contact-icon">📧</a>
-                        <a href="https://www.linkedin.com/in/harpreetkaur117/" target="_blank" class="contact-icon">💼</a>
-                        <a href="https://github.com/kaurharpreet116" target="_blank" class="contact-icon">🐙</a>
-                    </div>
+        <section id="education">
+            <h2>Education & Honors</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>MS in CS & IT (GPA 3.9)</h3>
+                    <p>Sacred Heart University, CT [cite: 33]</p>
                 </div>
-                <form class="contact-form">
-                    <input type="text" placeholder="Your Name" required />
-                    <input type="email" placeholder="Your Email" required />
-                    <textarea rows="5" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="btn">Send Message</button>
-                </form>
+                <div class="card">
+                    <h3>MCA (Gold Medalist)</h3>
+                    <p>IK Gujral PTU | University Topper Ranked #1 [cite: 34, 35, 42]</p>
+                </div>
+                <div class="card">
+                    <h3>BCA (Gold Medalist)</h3>
+                    <p>Guru Nanak Dev University | Ranked #1 [cite: 36, 42]</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <script src="script.js"></script>
+        <section id="contact">
+            <h2>Contact Information</h2>
+            <div class="contact-box">
+                <div class="contact-info-item">
+                    <span class="contact-label">NAME:</span> Harpreet Kaur [cite: 1]
+                </div>
+                <div class="contact-info-item">
+                    <span class="contact-label">CONTACT:</span> (209) 998-3979 [cite: 2]
+                </div>
+                <div class="contact-info-item">
+                    <span class="contact-label">EMAIL:</span> kaurpreethar1208@gmail.com [cite: 2]
+                </div>
+                <div style="margin-top: 20px;">
+                    <a href="https://www.linkedin.com/in/harpreetkaur117/" style="color: var(--accent); margin-right: 15px;">LinkedIn</a>
+                    <a href="https://github.com/kaurharpreet116" style="color: var(--accent);">GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <footer style="padding: 2rem 0; text-align: center; color: var(--text-dim); font-size: 0.8rem;">
+            &copy; 2025 Harpreet Kaur. Built with Focus.
+        </footer>
+    </div>
+
 </body>
 </html>
