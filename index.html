@@ -1,161 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Harpreet Kaur | Software Engineer Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Harpreet Kaur | Full Stack Developer Portfolio</title>
+  <meta name="description" content="Full Stack Developer building modern web apps with React, Node.js, and SQL. Explore projects, skills, and experience. Open to full-time opportunities." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0b1220" />
+
+  <meta property="og:title" content="Harpreet Kaur | Full Stack Developer" />
+  <meta property="og:description" content="Modern full stack portfolio with projects, skills, and experience. Open to opportunities." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="mypf.jpg" />
+  <meta property="og:url" content="#" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="mypf.jpg" type="image/jpeg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Harpreet Kaur",
+    "jobTitle": "Full Stack Developer",
+    "url": "#",
+    "sameAs": [
+      "https://www.linkedin.com/in/harpreetkaur117/",
+      "https://github.com/kaurharpreet116"
+    ],
+    "image": "mypf.jpg"
+  }
+  </script>
 </head>
+
 <body class="dark-mode">
-    <nav>
-        <div class="container nav-container">
-            <h2>Harpreet Kaur</h2>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#skill-projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button id="dark-mode-toggle">🌙</button>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <nav class="site-nav" aria-label="Primary navigation">
+      <div class="container nav-container">
+        <a class="brand" href="#top" aria-label="Go to top">
+          <span class="brand-name">Harpreet Kaur</span>
+        </a>
+
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-controls="nav-menu" aria-expanded="false">
+          <span class="nav-toggle-lines" aria-hidden="true"></span>
+        </button>
+
+        <div class="nav-actions">
+          <button id="dark-mode-toggle" type="button" class="icon-btn" aria-label="Toggle dark mode">🌙</button>
         </div>
+
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-overlay" id="nav-overlay" hidden></div>
     </nav>
 
-    <header>
-        <div class="container hero">
-            <img src="mypf.jpg" alt="Harpreet Kaur" class="hero-photo" />
-            <h1>Hi, I'm Harpreet Kaur</h1>
-            <p>
-                <strong>Software Developer & University Gold Medalist</strong><br>
-                Specializing in Full-Stack Development, AI/Object Detection, and Automation.
+    <section class="hero" aria-label="Introduction">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <p class="hero-kicker">Full Stack Developer</p>
+          <h1 class="hero-title">Building modern web apps that feel fast, clean, and reliable.</h1>
+          <p class="hero-subtitle">
+            I recently completed my Master&apos;s in Computer Science and IT and I am actively seeking full-time opportunities.
+            I build responsive interfaces, backend services, and data-driven features with a strong focus on user experience, code quality, and real-world delivery.
+          </p>
+
+          <ul class="hero-badges" aria-label="Key strengths">
+            <li class="badge">React</li>
+            <li class="badge">Node.js</li>
+            <li class="badge">SQL</li>
+            <li class="badge">REST APIs</li>
+            <li class="badge">Git</li>
+          </ul>
+
+          <div class="hero-btns" role="group" aria-label="Primary actions">
+            <a href="HarpreetKaurResume.pdf" class="btn btn-primary" download>Download Resume</a>
+            <a href="#projects" class="btn btn-secondary">View Projects</a>
+            <a href="#contact" class="btn btn-ghost">Contact</a>
+          </div>
+
+          <div class="hero-links" aria-label="External profiles">
+            <a href="https://www.linkedin.com/in/harpreetkaur117/" target="_blank" rel="noopener noreferrer" class="link-pill" aria-label="Open LinkedIn profile">
+              LinkedIn
+            </a>
+            <a href="https://github.com/kaurharpreet116" target="_blank" rel="noopener noreferrer" class="link-pill" aria-label="Open GitHub profile">
+              GitHub
+            </a>
+          </div>
+
+          <p class="hero-note">
+            Authorized to work in the U.S. on OPT. Open to Full Stack and Frontend leaning Full Stack roles.
+          </p>
+        </div>
+
+        <div class="hero-right">
+          <figure class="hero-card">
+            <img src="mypf.jpg" alt="Portrait photo of Harpreet Kaur" class="hero-photo" loading="eager" decoding="async" />
+            <figcaption class="hero-card-caption">
+              <p class="hero-name">Harpreet Kaur</p>
+              <p class="hero-role">Full Stack Developer</p>
+              <div class="hero-mini-stats" aria-label="Highlights">
+                <div class="mini-stat">
+                  <span class="mini-stat-number">1000+</span>
+                  <span class="mini-stat-label">Support tickets handled</span>
+                </div>
+                <div class="mini-stat">
+                  <span class="mini-stat-number">MS</span>
+                  <span class="mini-stat-label">Computer Science and IT</span>
+                </div>
+              </div>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main id="main">
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>About</h2>
+          <p class="section-subtitle">
+            A practical developer mindset with strong fundamentals, real support experience, and a focus on shipping clean web features.
+          </p>
+        </div>
+
+        <div class="content-card">
+          <p>
+            I am a Full Stack Developer with a strong foundation in building modern, user-focused web applications. My background combines strong CS fundamentals with hands-on problem solving from real environments.
+            I enjoy working across the full development lifecycle, from responsive UI and component design to backend services, database queries, and performance improvements.
+          </p>
+          <p>
+            I care about readable code, accessibility, and building features that make sense for real users. I am currently seeking a full-time role where I can contribute quickly, learn continuously, and grow into a high-impact engineer.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Experience</h2>
+          <p class="section-subtitle">Hands-on technical work in fast-paced environments with a strong focus on reliability and support.</p>
+        </div>
+
+        <article class="timeline-card">
+          <header class="timeline-header">
+            <div>
+              <h3>Graduate Assistant, Systems and Software Automation</h3>
+              <p class="meta"><strong>Sacred Heart University</strong> <span class="meta-sep">|</span> Fairfield, CT <span class="meta-sep">|</span> Jan 2025 to Dec 2025</p>
+            </div>
+          </header>
+
+          <ul class="bullets">
+            <li>Built and maintained automation scripts that reduced repetitive configuration work and improved consistency for end users.</li>
+            <li>Supported identity and access workflows across university systems and helped keep authentication reliable.</li>
+            <li>Investigated and resolved system and data issues using ticketing workflows, logs, and diagnostics.</li>
+            <li>Partnered with teams to improve security posture and keep systems updated and stable.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Skills</h2>
+          <p class="section-subtitle">A focused stack for building and shipping modern web products.</p>
+        </div>
+
+        <div class="skills-wrap">
+          <div class="skill-category">
+            <h3>Core</h3>
+            <div class="programming-grid" role="list">
+              <div class="prog-card" role="listitem">JavaScript (ES6+)</div>
+              <div class="prog-card" role="listitem">React</div>
+              <div class="prog-card" role="listitem">Node.js</div>
+              <div class="prog-card" role="listitem">Express</div>
+              <div class="prog-card" role="listitem">SQL</div>
+              <div class="prog-card" role="listitem">REST APIs</div>
+              <div class="prog-card" role="listitem">Git and GitHub</div>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3>Tools and Platforms</h3>
+            <div class="logo-grid" aria-label="Frameworks and tools">
+              <div class="logo-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" loading="lazy" decoding="async" />
+                <span class="tooltip">React</span>
+              </div>
+              <div class="logo-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" loading="lazy" decoding="async" />
+                <span class="tooltip">Node.js</span>
+              </div>
+              <div class="logo-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" loading="lazy" decoding="async" />
+                <span class="tooltip">PostgreSQL</span>
+              </div>
+              <div class="logo-item">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS" loading="lazy" decoding="async" />
+                <span class="tooltip">AWS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section projects">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Projects</h2>
+          <p class="section-subtitle">Selected work that highlights full stack skills and real product thinking.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <div class="project-top">
+              <h3 class="project-title">Ecolytic</h3>
+              <p class="project-stack">React, JavaScript, Node.js, SQL</p>
+            </div>
+            <p class="project-desc">
+              Carbon footprint focused web experience with clean UI, practical workflows, and features designed for real user habits and repeat usage.
             </p>
-            <div class="hero-btns">
-                <a href="HarpreetKaurResume.pdf" class="btn">Download Resume</a>
-                <a href="https://www.linkedin.com/in/harpreetkaur117/" class="btn" target="_blank">LinkedIn</a>
-                <a href="https://github.com/kaurharpreet116" class="btn" target="_blank">GitHub</a>
+            <ul class="project-bullets">
+              <li>Built responsive UI and structured components for maintainability.</li>
+              <li>Connected data flows and improved usability through iteration and testing.</li>
+            </ul>
+            <div class="project-links">
+              <a class="btn btn-small btn-secondary" href="#" target="_blank" rel="noopener noreferrer">Live Demo</a>
+              <a class="btn btn-small btn-ghost" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
-        </div>
-    </header>
+          </article>
 
-    <section id="about">
-        <div class="container about-content">
-            <h2>Professional Summary</h2>
-            <p>
-               Hi, I’m Harpreet Kaur, a Full-Stack Developer with a strong foundation in building modern, user-focused web applications. I recently completed my Master’s in Computer Science and Information Technology and I am now actively seeking full-time opportunities as a Full-Stack Developer.
-
-I enjoy working across the full development lifecycle, from designing responsive frontends to building reliable backend services and working with databases. I focus on writing clean code, solving real problems, and continuously improving both performance and user experience.
-
-I bring a practical mindset, strong debugging skills, and experience working in fast-paced, real-world environments. I am motivated to grow as a developer, contribute to meaningful projects, and add value to a team from day one.
-
-Technologies: React, JavaScript, Node.js, Express, SQL, REST APIs, Git and cloud fundamentals.
+          <article class="project-card">
+            <div class="project-top">
+              <h3 class="project-title">Student Grade Tracker</h3>
+              <p class="project-stack">React, JavaScript, SQL</p>
+            </div>
+            <p class="project-desc">
+              A simple product-style app that tracks academic performance with clean data views, filters, and a user-focused layout.
             </p>
+            <ul class="project-bullets">
+              <li>Designed clean UI patterns for fast scanning and clarity.</li>
+              <li>Implemented core CRUD flows and consistent state handling.</li>
+            </ul>
+            <div class="project-links">
+              <a class="btn btn-small btn-secondary" href="#" target="_blank" rel="noopener noreferrer">Live Demo</a>
+              <a class="btn btn-small btn-ghost" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-top">
+              <h3 class="project-title">E-commerce Database</h3>
+              <p class="project-stack">SQL, Data Modeling</p>
+            </div>
+            <p class="project-desc">
+              Database schema and queries designed to model real e-commerce entities like customers, products, orders, and inventory.
+            </p>
+            <ul class="project-bullets">
+              <li>Designed normalized tables and relationships for correctness.</li>
+              <li>Wrote queries for analytics, reporting, and operational workflows.</li>
+            </ul>
+            <div class="project-links">
+              <a class="btn btn-small btn-ghost" href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </article>
         </div>
+
+        <p class="projects-note">
+          Tip: Replace the Live Demo and GitHub links with your real URLs. If you do not have a live link, keep GitHub only.
+        </p>
+      </div>
     </section>
 
-    <section id="experience">
-        <div class="container">
-            <h2>Work Experience</h2>
-            <div class="experience-item">
-                <h3>Graduate Assistant – Systems & Software Automation</h3>
-                <p><strong>Sacred Heart University, Fairfield, CT</strong> | Jan 2025 – Dec 2025</p>
-                <ul>
-                    <li>Engineered PowerShell scripts to automate system configurations for 1,000+ users, reducing manual processing by 40%. [cite: 15]</li>
-                    <li>Managed enterprise integration for Okta and Office 365, ensuring seamless SSO across university infrastructure. [cite: 16]</li>
-                    <li>Performed SQL database diagnostics via Team Dynamix (TDX) to resolve systemic data discrepancies. [cite: 17]</li>
-                    <li>Collaborated with IT Security on vulnerability assessments and automated patch management. [cite: 21]</li>
-                </ul>
-            </div>
+    <section id="education" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Education</h2>
+          <p class="section-subtitle">Strong academic foundation with consistent performance.</p>
         </div>
+
+        <div class="edu-grid">
+          <article class="edu-item">
+            <h3>M.S. Computer Science and IT (GPA 3.9/4.0)</h3>
+            <p class="meta">Sacred Heart University, Connecticut <span class="meta-sep">|</span> 2024 to 2025</p>
+          </article>
+          <article class="edu-item">
+            <h3>Master of Computer Applications (Gold Medalist)</h3>
+            <p class="meta">IK Gujral PTU, India <span class="meta-sep">|</span> 2018 to 2020</p>
+          </article>
+          <article class="edu-item">
+            <h3>Bachelor of Computer Applications (University Topper)</h3>
+            <p class="meta">Guru Nanak Dev University, India <span class="meta-sep">|</span> 2015 to 2018</p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section id="skills">
-        <div class="container">
-            <h2>Technical Skills</h2>
-            <div class="skill-category">
-                <h3>Languages</h3>
-                <div class="programming-grid">
-                    <div class="prog-card">Python (FastAPI, PyTorch)</div>
-                    <div class="prog-card">JavaScript (ES6+)</div>
-                    <div class="prog-card">TypeScript</div>
-                    <div class="prog-card">Java</div>
-                    <div class="prog-card">SQL</div>
-                    <div class="prog-card">PowerShell</div>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <h3>Frameworks & Cloud</h3>
-                <div class="logo-grid">
-                    <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Native" /><span class="tooltip">React Native</span></div>
-                    <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" /><span class="tooltip">Node.js</span></div>
-                    <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg" alt="Electron" /><span class="tooltip">Electron</span></div>
-                    <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" /><span class="tooltip">PostgreSQL</span></div>
-                    <div class="logo-item"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="AWS" /><span class="tooltip">AWS</span></div>
-                </div>
-            </div>
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Contact</h2>
+          <p class="section-subtitle">Reach out for roles, collaborations, or referrals.</p>
         </div>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <p class="contact-lead">
+              I am open to Full Stack and Frontend leaning Full Stack opportunities. The fastest way to reach me is email.
+            </p>
+
+            <div class="social-links" aria-label="Contact links">
+              <a href="mailto:kaurpreethar1208@gmail.com" class="contact-icon" aria-label="Email Harpreet">📧</a>
+              <a href="https://www.linkedin.com/in/harpreetkaur117/" target="_blank" rel="noopener noreferrer" class="contact-icon" aria-label="LinkedIn profile">💼</a>
+              <a href="https://github.com/kaurharpreet116" target="_blank" rel="noopener noreferrer" class="contact-icon" aria-label="GitHub profile">🐙</a>
+            </div>
+          </div>
+
+          <form class="contact-form" id="contact-form" autocomplete="on">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="your@email.com" required />
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me what you are working on or what role you are hiring for" required></textarea>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p class="form-note" id="form-note" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
     </section>
 
-    <section id="skill-projects">
-        <div class="container">
-            <h2>Engineering Projects</h2>
-            <div class="project-grid">
-                <div class="project-card">
-                    <h3>Orbit - Offline-First Suite</h3>
-                    <p>React Native, FastAPI, PostgreSQL</p>
-                    <p>Architected a custom Sync Engine with "Last-Write-Wins" conflict resolution and local SQLite persistence for 100% offline uptime. [cite: 24]</p>
-                </div>
-                <div class="project-card">
-                    <h3>In-Cabin Object Detection</h3>
-                    <p>Python, YOLOv8, PyTorch</p>
-                    <p>Developed a CV pipeline comparing 5 architectures, achieving 55.70% mAP for synthetic interior occupancy detection. [cite: 27]</p>
-                </div>
-                <div class="project-card">
-                    <h3>Overlay Assistant</h3>
-                    <p>Electron, Node.js, JavaScript</p>
-                    <p>Desktop utility with global OS-level hotkeys and privacy features to prevent window capture during recordings. [cite: 30, 31]</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p class="footer-text">© <span id="year"></span> Harpreet Kaur. Built with HTML, CSS, and JavaScript.</p>
+        <a class="footer-link" href="#top">Back to top</a>
+      </div>
+    </footer>
+  </main>
 
-    <section id="education">
-        <div class="container">
-            <h2>Education</h2>
-            <div class="edu-item">
-                <h3>M.S. in Computer Science & IT (GPA 3.9/4.0)</h3>
-                <p>Sacred Heart University, CT | 2024 - 2025</p>
-            </div>
-            <div class="edu-item">
-                <h3>Master of Computer Applications (Gold Medalist)</h3>
-                <p>IK Gujral PTU, India | 2018 - 2020</p>
-            </div>
-            <div class="edu-item">
-                <h3>Bachelor of Computer Applications (University Topper)</h3>
-                <p>Guru Nanak Dev University, India | 2015 - 2018</p>
-            </div>
-        </div>
-    </section>
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Back to top" hidden>
+    ↑
+  </button>
 
-    <section id="contact">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <p>Open for Software Engineering opportunities and technical collaborations.</p>
-                    <div class="social-links">
-                        <a href="mailto:kaurpreethar1208@gmail.com" class="contact-icon">📧</a>
-                        <a href="https://www.linkedin.com/in/harpreetkaur117/" target="_blank" class="contact-icon">💼</a>
-                        <a href="https://github.com/kaurharpreet116" target="_blank" class="contact-icon">🐙</a>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-
