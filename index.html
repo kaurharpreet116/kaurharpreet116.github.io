@@ -1,978 +1,464 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Harpreet Kaur — Cloud Support Engineer (Associate). Incident response, troubleshooting, RCA, uptime, customer impact." />
-  <title>Harpreet Kaur — Cloud Support Engineer Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Modern, clean font (safe + common). If you want no external fonts, remove this line. -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Harpreet Kaur | Cloud Support Engineer Portfolio</title>
+  <meta name="description" content="Cloud Support Engineer portfolio focused on incident response, root cause analysis, troubleshooting, and production support across AWS, networking, and Linux." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0b1220" />
 
-  <link rel="stylesheet" href="./styles.css" />
+  <meta property="og:title" content="Harpreet Kaur | Cloud Support Engineer" />
+  <meta property="og:description" content="Incident-driven portfolio with RCA, triage, troubleshooting workflows, and production support mindset." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="mypf.jpg" />
+
+  <link rel="icon" href="mypf.jpg" type="image/jpeg" />
+  <link rel="stylesheet" href="style.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Harpreet Kaur",
+    "jobTitle": "Cloud Support Engineer",
+    "image": "mypf.jpg",
+    "sameAs": [
+      "https://www.linkedin.com/in/harpreetkaur117/",
+      "https://github.com/kaurharpreet116"
+    ]
+  }
+  </script>
 </head>
 
-<body>
-  <!-- Decorative background (cloud SVG layers) -->
-  <div class="bg">
-    <svg class="bg-cloud bg-cloud-1" viewBox="0 0 600 220" aria-hidden="true">
-      <path d="M146 170c-41 0-74-28-74-62 0-26 19-49 46-58 11-33 47-57 89-57 51 0 93 35 95 79 31 7 54 31 54 59 0 34-33 61-74 61H146z"/>
-    </svg>
-    <svg class="bg-cloud bg-cloud-2" viewBox="0 0 700 260" aria-hidden="true">
-      <path d="M180 200c-52 0-94-33-94-74 0-31 24-59 59-70 15-40 61-69 117-69 66 0 121 40 125 92 40 8 70 36 70 69 0 41-42 74-94 74H180z"/>
-    </svg>
-    <svg class="bg-cloud bg-cloud-3" viewBox="0 0 520 200" aria-hidden="true">
-      <path d="M120 150c-38 0-69-24-69-54 0-23 17-43 42-51 10-29 41-50 79-50 45 0 82 30 84 69 29 6 50 27 50 51 0 30-31 54-69 54H120z"/>
-    </svg>
-    <div class="bg-grid" aria-hidden="true"></div>
-  </div>
+<body class="dark-mode">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
 
-  <!-- Top bar -->
-  <header class="topbar">
-    <div class="container topbar-inner">
-      <a class="brand" href="#top">
-        <span class="brand-dot"></span>
-        <span>Harpreet Kaur</span>
-        <span class="brand-tag">Cloud Support Engineer</span>
-      </a>
+  <header class="site-header" id="top">
+    <nav class="site-nav" aria-label="Primary navigation">
+      <div class="container nav-container">
+        <a class="brand" href="#top" aria-label="Go to top">
+          <span class="brand-name">Harpreet Kaur</span>
+          <span class="brand-role">Cloud Support Engineer</span>
+        </a>
 
-      <nav class="nav" aria-label="Primary">
-        <a href="#incidents">Incidents</a>
-        <a href="#thinking">How I Think</a>
-        <a href="#skills">Skills</a>
-        <a href="#oncall">On-Call</a>
-        <a href="#certs">Certs</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <div class="topbar-actions">
-        <button class="btn ghost" id="themeToggle" type="button" aria-label="Toggle theme">
-          <span class="icon" aria-hidden="true">☾</span>
-          <span class="hide-sm">Theme</span>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-controls="nav-menu" aria-expanded="false">
+          <span class="nav-toggle-lines" aria-hidden="true"></span>
         </button>
 
-        <a class="btn primary" href="#incidents">
-          View Incident Portfolio
-        </a>
-      </div>
-
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-
-    <!-- Mobile menu -->
-    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
-      <div class="container">
-        <a href="#incidents" class="m-link">Incidents</a>
-        <a href="#thinking" class="m-link">How I Think</a>
-        <a href="#skills" class="m-link">Skills</a>
-        <a href="#oncall" class="m-link">On-Call</a>
-        <a href="#certs" class="m-link">Certs</a>
-        <a href="#about" class="m-link">About</a>
-        <a href="#contact" class="m-link">Contact</a>
-        <div class="m-actions">
-          <a class="btn" href="#contact">Quick Contact</a>
+        <div class="nav-actions">
+          <button id="dark-mode-toggle" type="button" class="icon-btn" aria-label="Toggle dark mode">🌙</button>
         </div>
-      </div>
-    </div>
-  </header>
 
-  <main id="top">
-    <!-- HERO -->
-    <section class="section hero">
+        <ul class="nav-links" id="nav-menu">
+          <li><a href="#incidents">Incident Portfolio</a></li>
+          <li><a href="#how-i-think">How I Think</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#oncall">On Call</a></li>
+          <li><a href="#certs">Certs</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Resume and Contact</a></li>
+        </ul>
+      </div>
+      <div class="nav-overlay" id="nav-overlay" hidden></div>
+    </nav>
+
+    <section class="hero" aria-label="Introduction">
+      <div class="hero-bg" aria-hidden="true">
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="cloud cloud-3"></div>
+        <div class="cloud cloud-4"></div>
+      </div>
+
       <div class="container hero-grid">
         <div class="hero-left">
-          <div class="badge">
-            <span class="dot"></span>
-            Associate / Entry-Level • Support • Incident Response • RCA
-          </div>
+          <p class="hero-kicker">Cloud Support Engineer</p>
 
-          <h1>
-            I restore service fast and prevent repeat incidents.
-          </h1>
+          <h1 class="hero-title">I help restore service fast, find root cause, and prevent repeat incidents.</h1>
 
-          <p class="lead">
-            I’m <strong>Harpreet Kaur</strong> — a Cloud Support Engineer (Associate) focused on
-            <strong>customer-impacting production issues</strong> across AWS: compute, networking, IAM/security,
-            load balancing, DNS, storage, and Linux.
+          <p class="hero-subtitle">
+            I focus on customer-impacting issues across AWS, networking, and Linux.
+            This portfolio is built like a real support workflow: impact, investigation, resolution, and prevention.
           </p>
 
-          <div class="hero-pills">
-            <span class="pill">Impact → Investigation → Root Cause → Fix → Prevention</span>
-            <span class="pill">Clear timelines + status updates</span>
-            <span class="pill">Runbooks + monitoring improvements</span>
+          <ul class="hero-badges" aria-label="Key strengths">
+            <li class="badge">SEV triage</li>
+            <li class="badge">RCA and post-incident reviews</li>
+            <li class="badge">AWS troubleshooting</li>
+            <li class="badge">Networking and DNS</li>
+            <li class="badge">Linux logs and services</li>
+          </ul>
+
+          <div class="hero-btns" role="group" aria-label="Primary actions">
+            <a href="#incidents" class="btn btn-primary">View Incident Portfolio</a>
+            <a href="HarpreetKaurResume.pdf" class="btn btn-secondary" download>View Resume</a>
+            <a href="https://github.com/kaurharpreet116" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">GitHub</a>
           </div>
 
-          <div class="hero-cta">
-            <a class="btn primary" href="#incidents">View Incident Portfolio</a>
-            <a class="btn" href="#resume">View Resume</a>
-            <a class="btn ghost" href="https://github.com/kaurharpreet116" target="_blank" rel="noopener">GitHub</a>
-          </div>
-
-          <div class="mini-metrics">
-            <div class="mini-card">
-              <div class="mini-k">Incident write-ups</div>
-              <div class="mini-v">7</div>
+          <div class="hero-meta">
+            <div class="meta-pill" title="Communication and ownership">
+              <span class="meta-label">Mindset</span>
+              <span class="meta-value">Calm, structured, customer-focused</span>
             </div>
-            <div class="mini-card">
-              <div class="mini-k">Runbook snippets</div>
-              <div class="mini-v">10+</div>
+            <div class="meta-pill" title="Work authorization">
+              <span class="meta-label">Work</span>
+              <span class="meta-value">Authorized in the U.S. (OPT)</span>
             </div>
-            <div class="mini-card">
-              <div class="mini-k">Focus</div>
-              <div class="mini-v">Uptime</div>
+            <div class="meta-pill" title="On-call readiness">
+              <span class="meta-label">On-call</span>
+              <span class="meta-value">Comfortable with rotations and escalation</span>
             </div>
           </div>
         </div>
 
-        <!-- Right panel: status style -->
-        <aside class="hero-right">
-          <div class="panel">
-            <div class="panel-title">Status</div>
-            <div class="status-line">
-              <span class="status-dot ok" aria-hidden="true"></span>
-              <span><strong>Available</strong> for on-call rotations</span>
-            </div>
-            <div class="panel-row">
-              <span class="muted">Timezone</span>
-              <span>America/Los_Angeles</span>
-            </div>
-            <div class="panel-row">
-              <span class="muted">Primary</span>
-              <span>AWS • Linux • Networking • IAM</span>
-            </div>
-            <div class="panel-row">
-              <span class="muted">Style</span>
-              <span>RCA • Runbooks • Prevention</span>
-            </div>
-
-            <div class="panel-actions">
-              <!-- Replace with your resume PDF path -->
-              <a class="btn" href="./Harpreet-Kaur-Resume.pdf" target="_blank" rel="noopener">Download Resume</a>
-              <a class="btn ghost" href="https://www.linkedin.com/in/harpreetkaur117/" target="_blank" rel="noopener">LinkedIn</a>
-            </div>
-
-            <div class="panel-note">
-              This site is intentionally built like support documentation — consistent structure, clear evidence,
-              and realistic incident workflows.
-            </div>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- HOW I THINK -->
-    <section class="section" id="thinking">
-      <div class="container">
-        <div class="section-head">
-          <h2>How I think as a Cloud Support Engineer</h2>
-          <p class="muted">
-            I troubleshoot with signals and scope first — then mitigate safely — then write the RCA so it doesn’t happen again.
-          </p>
-        </div>
-
-        <div class="grid-3">
-          <div class="card">
-            <h3>Debug workflow</h3>
-            <ol class="list">
-              <li><strong>Confirm impact</strong> (who/what/where, blast radius)</li>
-              <li><strong>Identify the failing layer</strong> (DNS → network → LB → instance → app)</li>
-              <li><strong>Check signals</strong> (metrics, logs, target health, flow signals)</li>
-              <li><strong>Mitigate</strong> (fast, safe rollback / bypass / restore)</li>
-              <li><strong>Fix + prevent</strong> (runbook, alerts, guardrails)</li>
-            </ol>
-          </div>
-
-          <div class="card">
-            <h3>Severity & prioritization</h3>
-            <div class="sev">
-              <div class="sev-row">
-                <span class="sev-tag sev1">SEV-1</span>
-                <span>Production outage, major customers impacted → mitigate first</span>
+        <div class="hero-right">
+          <figure class="hero-card">
+            <img src="mypf.jpg" alt="Portrait photo of Harpreet Kaur" class="hero-photo" loading="eager" decoding="async" />
+            <figcaption class="hero-card-caption">
+              <p class="hero-name">Harpreet Kaur</p>
+              <p class="hero-role">Cloud Support Engineer</p>
+              <div class="hero-mini-stats" aria-label="Highlights">
+                <div class="mini-stat">
+                  <span class="mini-stat-number">RCA</span>
+                  <span class="mini-stat-label">Impact to fix to prevention</span>
+                </div>
+                <div class="mini-stat">
+                  <span class="mini-stat-number">SEV</span>
+                  <span class="mini-stat-label">Triage and escalation</span>
+                </div>
               </div>
-              <div class="sev-row">
-                <span class="sev-tag sev2">SEV-2</span>
-                <span>Partial outage / degradation → stabilize + restore within SLA</span>
-              </div>
-              <div class="sev-row">
-                <span class="sev-tag sev3">SEV-3</span>
-                <span>Single service bug / workaround exists → schedule fix + prevention</span>
-              </div>
-            </div>
-            <div class="muted small">
-              I always communicate severity with evidence: error rates, latency, health checks, and user reports.
-            </div>
-          </div>
 
-          <div class="card">
-            <h3>Communication during incidents</h3>
-            <ul class="list">
-              <li><strong>15–20 min updates</strong> during SEV-1 until stable</li>
-              <li>Clear “<strong>What we know</strong> / <strong>What we’re doing</strong> / <strong>Next update</strong>”</li>
-              <li>Track changes in a timeline (who changed what, when)</li>
-              <li>Clean handoffs: current hypothesis, done checks, next actions</li>
+              <div class="hero-links" aria-label="External profiles">
+                <a href="https://www.linkedin.com/in/harpreetkaur117/" target="_blank" rel="noopener noreferrer" class="link-pill">LinkedIn</a>
+                <a href="mailto:kaurpreethar1208@gmail.com" class="link-pill">Email</a>
+              </div>
+            </figcaption>
+          </figure>
+
+          <div class="runbook-card">
+            <p class="runbook-title">Incident Runbook Style</p>
+            <ul class="runbook-list">
+              <li>Confirm impact and scope</li>
+              <li>Collect signals (metrics, logs)</li>
+              <li>Mitigate service fast</li>
+              <li>Identify root cause</li>
+              <li>Prevent recurrence</li>
             </ul>
-            <div class="muted small">
-              Calm tone. No blame. Document everything.
-            </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- INCIDENTS -->
-    <section class="section" id="incidents">
+      <div class="hero-divider" aria-hidden="true"></div>
+    </section>
+  </header>
+
+  <main id="main">
+    <section id="incidents" class="section section-alt">
       <div class="container">
-        <div class="section-head">
-          <h2>Incident portfolio</h2>
-          <p class="muted">
-            Realistic cloud incidents written in a support style: impact → investigation → root cause → resolution → prevention.
+        <div class="section-heading">
+          <h2>Incident Portfolio</h2>
+          <p class="section-subtitle">
+            Realistic cloud incidents written in a support format.
+            Each includes impact, symptoms, investigation steps, root cause, resolution, and prevention.
           </p>
         </div>
 
-        <div class="toolbar">
-          <div class="filters" role="group" aria-label="Incident filters">
-            <button class="chip active" data-filter="all" type="button">All</button>
-            <button class="chip" data-filter="network" type="button">Networking</button>
-            <button class="chip" data-filter="iam" type="button">IAM/Security</button>
-            <button class="chip" data-filter="compute" type="button">Compute/Linux</button>
-            <button class="chip" data-filter="lb" type="button">Load Balancing</button>
-            <button class="chip" data-filter="dns" type="button">DNS</button>
-            <button class="chip" data-filter="storage" type="button">Storage</button>
-          </div>
-
-          <div class="search">
-            <input id="incidentSearch" type="search" placeholder="Search incidents (e.g., AccessDenied, ALB, SSL, Route 53)..." />
-          </div>
+        <div class="filters" aria-label="Incident filters">
+          <button class="filter-btn active" type="button" data-filter="all">All</button>
+          <button class="filter-btn" type="button" data-filter="networking">Networking</button>
+          <button class="filter-btn" type="button" data-filter="iam">IAM and Security</button>
+          <button class="filter-btn" type="button" data-filter="lb">Load Balancing</button>
+          <button class="filter-btn" type="button" data-filter="storage">Storage</button>
+          <button class="filter-btn" type="button" data-filter="dns">DNS and TLS</button>
+          <button class="filter-btn" type="button" data-filter="linux">Linux</button>
         </div>
 
-        <div class="incident-grid" id="incidentGrid">
-          <!-- Incident 1 -->
-          <article class="incident card" data-tags="compute network" data-title="EC2 unreachable — security group rule removed">
-            <div class="incident-top">
-              <span class="sev-tag sev2">SEV-2</span>
-              <span class="tag">EC2</span><span class="tag">VPC</span><span class="tag">SSH</span>
-              <span class="muted small right">MTTR: 28 min</span>
-            </div>
-            <h3>EC2 unreachable — Security Group rule removed</h3>
-            <p class="muted">
-              Bastion couldn’t reach app instance on port 22/443 after a change. Restored access and added guardrails.
-            </p>
-            <details class="details">
-              <summary>Open incident write-up</summary>
-              <div class="details-body">
-                <div class="cols">
-                  <div>
-                    <h4>Incident summary</h4>
-                    <p>Production instance became unreachable for SSH and HTTPS after a security group change.</p>
+        <div class="incident-grid" id="incident-grid" aria-label="Incident cards"></div>
 
-                    <h4>Impact</h4>
-                    <ul class="list">
-                      <li>Ops couldn’t access instance for live debugging</li>
-                      <li>Users saw intermittent timeouts due to failed restarts</li>
-                    </ul>
-
-                    <h4>Symptoms</h4>
-                    <ul class="list">
-                      <li>SSH timeout from bastion</li>
-                      <li>HTTPS health checks failing</li>
-                      <li>No recent CPU spike; instance status checks OK</li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h4>Investigation steps</h4>
-                    <ol class="list">
-                      <li>Confirmed instance status checks OK (EC2 console / CLI).</li>
-                      <li>Verified route table + subnet association correct.</li>
-                      <li>Checked Security Group inbound rules for 22/443.</li>
-                      <li>Validated NACL rules weren’t blocking.</li>
-                      <li>Checked VPC Flow Logs for REJECT on target ENI.</li>
-                    </ol>
-
-                    <h4>Root cause</h4>
-                    <p>Inbound rule for <code>TCP 22</code> and <code>TCP 443</code> was removed during a “cleanup” change, breaking access and health checks.</p>
-
-                    <h4>Resolution</h4>
-                    <ul class="list">
-                      <li>Re-added least-privilege inbound rules (22 from bastion SG, 443 from ALB SG).</li>
-                      <li>Validated reachability and restored health checks.</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <h4>Prevention / learnings</h4>
-                <ul class="list">
-                  <li>Add change checklist: “Validate SG dependencies (ALB → Instance, Bastion → Instance)”</li>
-                  <li>Use IaC / versioned SG configs + code review for SG changes</li>
-                  <li>Alert on sudden rise in REJECT counts in VPC Flow Logs</li>
-                </ul>
-
-                <div class="tools">
-                  <span class="tool">AWS CLI</span>
-                  <span class="tool">EC2</span>
-                  <span class="tool">VPC Flow Logs</span>
-                  <span class="tool">Security Groups</span>
-                  <span class="tool">NACL</span>
-                  <span class="tool">SSH</span>
-                </div>
-
-                <div class="cmd">
-<pre><code># Check security groups attached to instance
-aws ec2 describe-instances --instance-ids i-xxxxxxxx --query "Reservations[].Instances[].SecurityGroups[].GroupId"
-
-# Inspect inbound rules for a security group
-aws ec2 describe-security-groups --group-ids sg-xxxxxxxx
-
-# (If enabled) confirm VPC flow log rejects (CloudWatch Logs Insights query)
-# filter action="REJECT" and dstPort in [22,443]</code></pre>
-                </div>
-              </div>
-            </details>
-          </article>
-
-          <!-- Incident 2 -->
-          <article class="incident card" data-tags="lb compute" data-title="Application down behind ALB — target health checks failing">
-            <div class="incident-top">
-              <span class="sev-tag sev1">SEV-1</span>
-              <span class="tag">ALB</span><span class="tag">Target Group</span><span class="tag">HTTP 5xx</span>
-              <span class="muted small right">MTTR: 19 min</span>
-            </div>
-            <h3>Application down behind ALB — Target health checks failing</h3>
-            <p class="muted">
-              ALB returned 502. Root cause was app listening on wrong port after deploy. Fixed + added health check guardrail.
-            </p>
-            <details class="details">
-              <summary>Open incident write-up</summary>
-              <div class="details-body">
-                <div class="cols">
-                  <div>
-                    <h4>Impact</h4>
-                    <ul class="list">
-                      <li>All users received <code>502 Bad Gateway</code></li>
-                      <li>Checkout API unavailable</li>
-                    </ul>
-
-                    <h4>Symptoms</h4>
-                    <ul class="list">
-                      <li>ALB target group: unhealthy (health check failed)</li>
-                      <li>ALB access logs show 502 spikes</li>
-                      <li>Instance reachable internally, but app endpoint not responding</li>
-                    </ul>
-
-                    <h4>Timeline</h4>
-                    <ul class="list">
-                      <li><strong>T+0:</strong> Pager alert: 5xx error rate > threshold</li>
-                      <li><strong>T+5:</strong> Confirmed TG unhealthy; rolled back traffic shift paused</li>
-                      <li><strong>T+12:</strong> Found app listening on 8081 not 8080</li>
-                      <li><strong>T+19:</strong> Fixed service config; targets healthy</li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h4>Investigation</h4>
-                    <ol class="list">
-                      <li>Checked ALB target health + reason codes.</li>
-                      <li>Validated security group path: ALB SG → Instance SG on app port.</li>
-                      <li>SSH to instance; verified process and listening ports (<code>ss -lntp</code>).</li>
-                      <li>Checked app logs for bind/listen config.</li>
-                      <li>Verified health check path and matcher config.</li>
-                    </ol>
-
-                    <h4>Root cause</h4>
-                    <p>Deploy changed the service port to <code>8081</code>, but ALB target group health checks were still configured for <code>8080</code>.</p>
-
-                    <h4>Resolution</h4>
-                    <ul class="list">
-                      <li>Restored correct app listen port (8080) via service config rollback.</li>
-                      <li>Restarted service and verified health checks passing.</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <h4>Prevention</h4>
-                <ul class="list">
-                  <li>Add CI check: “service port must match TG config”</li>
-                  <li>Health check should validate a lightweight <code>/health</code> endpoint</li>
-                  <li>Create rollback runbook + deploy guardrail for port changes</li>
-                </ul>
-
-                <div class="tools">
-                  <span class="tool">ALB</span>
-                  <span class="tool">Target Groups</span>
-                  <span class="tool">CloudWatch</span>
-                  <span class="tool">Linux (ss/journalctl)</span>
-                  <span class="tool">Logs</span>
-                </div>
-
-                <div class="cmd">
-<pre><code># Target health
-aws elbv2 describe-target-health --target-group-arn arn:aws:elasticloadbalancing:...
-
-# On instance
-ss -lntp
-sudo journalctl -u myapp --since "30 min ago" --no-pager
-curl -I http://127.0.0.1:8080/health</code></pre>
-                </div>
-              </div>
-            </details>
-          </article>
-
-          <!-- Incident 3 -->
-          <article class="incident card" data-tags="iam" data-title="Production AccessDenied — IAM policy missing kms:Decrypt">
-            <div class="incident-top">
-              <span class="sev-tag sev2">SEV-2</span>
-              <span class="tag">IAM</span><span class="tag">KMS</span><span class="tag">AccessDenied</span>
-              <span class="muted small right">MTTR: 31 min</span>
-            </div>
-            <h3>Production AccessDenied — IAM policy missing KMS decrypt</h3>
-            <p class="muted">
-              App failed to read encrypted config. Debugged policy evaluation, fixed least-privilege permissions, documented prevention.
-            </p>
-            <details class="details">
-              <summary>Open incident write-up</summary>
-              <div class="details-body">
-                <div class="cols">
-                  <div>
-                    <h4>Impact</h4>
-                    <ul class="list">
-                      <li>New deployments failed on startup (could not load config)</li>
-                      <li>Increased error rate during scale events</li>
-                    </ul>
-
-                    <h4>Symptoms</h4>
-                    <ul class="list">
-                      <li>CloudWatch logs: <code>AccessDeniedException</code></li>
-                      <li>Error mentions KMS decrypt / encrypted parameter</li>
-                    </ul>
-                  </div>
-
-                  <div>
-                    <h4>Investigation</h4>
-                    <ol class="list">
-                      <li>Confirmed failing call from logs (service + action + resource).</li>
-                      <li>Used IAM Policy Simulator / evaluation reasoning.</li>
-                      <li>Checked role trust policy (assume-role) correct.</li>
-                      <li>Verified key policy + IAM policy alignment.</li>
-                    </ol>
-
-                    <h4>Root cause</h4>
-                    <p>Instance role had permission to read the parameter/object, but was missing <code>kms:Decrypt</code> for the specific CMK.</p>
-
-                    <h4>Resolution</h4>
-                    <ul class="list">
-                      <li>Added least-privilege <code>kms:Decrypt</code> scoped to the CMK ARN.</li>
-                      <li>Validated new deployment succeeded; monitored error rate back to baseline.</li>
-                    </ul>
-                  </div>
-                </div>
-
-                <h4>Prevention</h4>
-                <ul class="list">
-                  <li>Standardize “encrypted config access” policy module</li>
-                  <li>Deployment pre-check: simulate role access to required resources</li>
-                  <li>Alert on sudden <code>AccessDenied</code> spikes by service</li>
-                </ul>
-
-                <div class="tools">
-                  <span class="tool">IAM</span>
-                  <span class="tool">KMS</span>
-                  <span class="tool">CloudWatch Logs</span>
-                  <span class="tool">Policy Simulator</span>
-                </div>
-
-                <div class="cmd">
-<pre><code># Example: verify role and attached policies
-aws iam list-attached-role-policies --role-name MyAppRole
-
-# Identify KMS key used (from config/logs), then ensure decrypt is allowed
-# Use Policy Simulator in console or CLI for targeted checks (if available in your workflow)</code></pre>
-                </div>
-              </div>
-            </details>
-          </article>
-
-          <!-- Incident 4 -->
-          <article class="incident card" data-tags="storage iam" data-title="S3 AccessDenied outage — bucket policy blocked application role">
-            <div class="incident-top">
-              <span class="sev-tag sev2">SEV-2</span>
-              <span class="tag">S3</span><span class="tag">Bucket Policy</span><span class="tag">403</span>
-              <span class="muted small right">MTTR: 24 min</span>
-            </div>
-            <h3>S3 403 AccessDenied — bucket policy blocked app role</h3>
-            <p class="muted">
-              Static assets and uploads failed. Found explicit deny in bucket policy applied to wrong principal pattern.
-            </p>
-            <details class="details">
-              <summary>Open incident write-up</summary>
-              <div class="details-body">
-                <h4>Impact</h4>
-                <ul class="list">
-                  <li>User uploads failed (403)</li>
-                  <li>Some pages missing assets</li>
-                </ul>
-
-                <h4>Investigation → Root cause</h4>
-                <ul class="list">
-                  <li>CloudWatch logs showed 403 from S3.</li>
-                  <li>Checked IAM role allowed actions, but bucket policy had an <strong>explicit Deny</strong> for a broad principal condition.</li>
-                  <li>The deny matched the app role due to a wildcard pattern.</li>
-                </ul>
-
-                <h4>Resolution</h4>
-                <ul class="list">
-                  <li>Narrowed deny condition to intended principals only.</li>
-                  <li>Validated access via test request + monitored error rate drop.</li>
-                </ul>
-
-                <h4>Prevention</h4>
-                <ul class="list">
-                  <li>Peer review bucket policy changes</li>
-                  <li>Add canary: periodic <code>GetObject/PutObject</code> from app role</li>
-                </ul>
-
-                <div class="tools">
-                  <span class="tool">S3</span>
-                  <span class="tool">IAM</span>
-                  <span class="tool">CloudWatch Logs</span>
-                </div>
-              </div>
-            </details>
-          </article>
-
-          <!-- Incident 5 -->
-          <article class="incident card" data-tags="dns" data-title="Route 53 misconfiguration — wrong CNAME caused traffic to stale endpoint">
-            <div class="incident-top">
-              <span class="sev-tag sev3">SEV-3</span>
-              <span class="tag">Route 53</span><span class="tag">DNS</span><span class="tag">CNAME</span>
-              <span class="muted small right">MTTR: 42 min</span>
-            </div>
-            <h3>DNS misconfiguration — wrong CNAME pointed to stale endpoint</h3>
-            <p class="muted">
-              Some users hit an old environment due to cached DNS and a mistaken record. Fixed record + reduced TTL for future changes.
-            </p>
-            <details class="details">
-              <summary>Open incident write-up</summary>
-              <div class="details-body">
-                <h4>Impact</h4>
-                <ul class="list">
-                  <li>Users intermittently routed to outdated environment</li>
-                  <li>Login errors reported in one region</li>
-                </ul>
-
-                <h4>Investigation</h4>
-                <ol class="list">
-                  <li>Compared DNS answers across resolvers (local + public).</li>
-                  <li>Checked hosted zone record history / recent changes.</li>
-                  <li>Validated intended ALB DNS name and record type.</li>
-                </ol>
-
-                <h4>Root cause</h4>
-                <p>CNAME was updated to the wrong target during a cutover, and higher TTL caused longer cache persistence.</p>
-
-                <h4>Resolution</h4>
-                <ul class="list">
-                  <li>Corrected the record target</li>
-                  <li>Temporarily lowered TTL for the migration window</li>
-                </ul>
-
-                <h4>Prevention</h4>
-                <ul class="list">
-                  <li>Change checklist: validate target endpoint before commit</li>
-                  <li>Use health-based routing where appropriate</li>
-                </ul>
-
-                <div class="tools">
-                  <span class="tool">Route 53</span>
-                  <span class="tool">dig/nslookup</span>
-                  <span class="tool">Change control</span>
-                </div>
-
-                <div class="cmd">
-<pre><code>dig myapp.example.com +short
-nslookup myapp.example.com 8.8.8.8</code></pre>
-                </div>
-              </div>
-            </details>
-          </article>
-
-          <!-- Incident 6 -->
-          <article class="incident card" data-tags="lb" data-title="SSL/TLS certificate expired — HTTPS failures on custom domain">
-            <div class="incident-top">
-              <span class="sev-tag sev2">SEV-2</span>
-              <span class="tag">TLS</span><span class="tag">ACM</span><span class="tag">ALB</span>
-              <span class="muted small right">MTTR: 37 min</span>
-            </div>
-            <h3>SSL/TLS certificate expired — HTTPS failures on custom domain</h3>
-            <p class="muted">
-              Browsers blocked access due to cert expiry. Replaced cert and added expiry monitoring.
-            </p>
-            <details class="details">
-              <summary>Open incident write-up</summary>
-              <div class="details-body">
-                <h4>Impact</h4>
-                <ul class="list">
-                  <li>Users saw “certificate expired” browser error</li>
-                  <li>API clients failed TLS handshake</li>
-                </ul>
-
-                <h4>Investigation → Root cause</h4>
-                <ul class="list">
-                  <li>Confirmed expiry date using <code>openssl s_client</code>.</li>
-                  <li>Checked ALB listener certificate in ACM.</li>
-                  <li>Root cause: cert renewal wasn’t validated after DNS change.</li>
-                </ul>
-
-                <h4>Resolution</h4>
-                <ul class="list">
-                  <li>Issued/attached new ACM cert to ALB listener</li>
-                  <li>Validated handshake + monitored error rate down</li>
-                </ul>
-
-                <h4>Prevention</h4>
-                <ul class="list">
-                  <li>Add alert: certificate expiry at 30/14/7 days</li>
-                  <li>Track domain validation dependencies in runbook</li>
-                </ul>
-
-                <div class="tools">
-                  <span class="tool">ACM</span>
-                  <span class="tool">ALB</span>
-                  <span class="tool">openssl</span>
-                  <span class="tool">Monitoring</span>
-                </div>
-
-                <div class="cmd">
-<pre><code>echo | openssl s_client -servername myapp.example.com -connect myapp.example.com:443 2>/dev/null | openssl x509 -noout -dates</code></pre>
-                </div>
-              </div>
-            </details>
-          </article>
-
-          <!-- Incident 7 -->
-          <article class="incident card" data-tags="compute" data-title="Linux service crash loop — systemd restart storm caused CPU spike">
-            <div class="incident-top">
-              <span class="sev-tag sev3">SEV-3</span>
-              <span class="tag">Linux</span><span class="tag">systemd</span><span class="tag">Logs</span>
-              <span class="muted small right">MTTR: 33 min</span>
-            </div>
-            <h3>Linux service crash loop — systemd restart storm</h3>
-            <p class="muted">
-              Service kept restarting due to missing env var. Fixed unit config and added preflight validation.
-            </p>
-            <details class="details">
-              <summary>Open incident write-up</summary>
-              <div class="details-body">
-                <h4>Impact</h4>
-                <ul class="list">
-                  <li>High CPU due to restart loop</li>
-                  <li>Degraded response time for app</li>
-                </ul>
-
-                <h4>Investigation</h4>
-                <ol class="list">
-                  <li>Checked systemd status and restart count.</li>
-                  <li>Reviewed journald logs around crash.</li>
-                  <li>Validated required env vars/config files exist.</li>
-                </ol>
-
-                <h4>Root cause</h4>
-                <p>Missing environment variable after deployment caused the service to exit immediately; systemd restarted continuously.</p>
-
-                <h4>Resolution</h4>
-                <ul class="list">
-                  <li>Restored env var via unit drop-in / config</li>
-                  <li>Restarted service and confirmed stable</li>
-                </ul>
-
-                <h4>Prevention</h4>
-                <ul class="list">
-                  <li>Add startup validation and fail with clear error once</li>
-                  <li>Set sane systemd restart limits</li>
-                  <li>Alert on restart storms</li>
-                </ul>
-
-                <div class="tools">
-                  <span class="tool">Linux</span>
-                  <span class="tool">systemd</span>
-                  <span class="tool">journalctl</span>
-                </div>
-
-                <div class="cmd">
-<pre><code>systemctl status myapp
-journalctl -u myapp --since "1 hour ago" --no-pager
-systemctl show myapp -p Restart -p RestartUSec -p StartLimitIntervalUSec -p StartLimitBurst</code></pre>
-                </div>
-              </div>
-            </details>
-          </article>
-
+        <div class="note-card">
+          <p class="note-title">How to read these</p>
+          <p class="note-text">
+            I write incidents the way support teams work: mitigate first, then confirm the exact root cause,
+            then add prevention actions like alerts, runbooks, and change guardrails.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- SKILLS -->
-    <section class="section" id="skills">
+    <section id="how-i-think" class="section">
       <div class="container">
-        <div class="section-head">
-          <h2>Cloud & support skills</h2>
-          <p class="muted">Grouped for recruiter scanning (support-oriented, not buzzwords).</p>
+        <div class="section-heading">
+          <h2>How I Think as a Cloud Support Engineer</h2>
+          <p class="section-subtitle">A practical workflow for triage, investigation, communication, and prevention.</p>
         </div>
 
         <div class="grid-2">
-          <div class="card">
-            <h3>Cloud platforms (AWS)</h3>
-            <ul class="chips">
-              <li>EC2</li><li>VPC</li><li>Security Groups</li><li>NACL</li><li>ALB/NLB</li><li>Route 53</li>
-              <li>S3</li><li>IAM</li><li>CloudWatch (metrics/logs/alarms)</li><li>CloudTrail (audit)</li>
-              <li>ACM (TLS)</li>
-            </ul>
-          </div>
+          <article class="content-card reveal">
+            <h3>Debug loop</h3>
+            <ol class="steps">
+              <li><strong>Confirm impact</strong> and scope, who is affected, what is failing, since when.</li>
+              <li><strong>Pick a failure domain</strong> (network, IAM, app, DNS, storage, OS).</li>
+              <li><strong>Check signals first</strong> (CloudWatch metrics, logs, ALB health, CloudTrail).</li>
+              <li><strong>Mitigate quickly</strong> with the lowest-risk change to restore service.</li>
+              <li><strong>Prove root cause</strong> using evidence, timelines, and change history.</li>
+              <li><strong>Prevent recurrence</strong> (alerts, runbooks, guardrails, checks).</li>
+            </ol>
+          </article>
 
-          <div class="card">
+          <article class="content-card reveal">
+            <h3>Severity and communication</h3>
+            <ul class="bullets">
+              <li><strong>SEV 1</strong>: outage or major customer impact. Mitigate first, updates every 15 to 30 minutes.</li>
+              <li><strong>SEV 2</strong>: partial outage or degraded performance. Restore critical path, then fix.</li>
+              <li><strong>SEV 3</strong>: limited impact or workaround exists. Document and schedule fix.</li>
+              <li><strong>Updates</strong>: what is confirmed, what is unknown, next step, and ETA for next update.</li>
+              <li><strong>After</strong>: final summary, root cause, and prevention actions.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="grid-3">
+          <article class="mini-card reveal">
+            <h3>During incidents</h3>
+            <p>Stay calm. Reduce blast radius. Restore service. Keep notes for the timeline.</p>
+          </article>
+          <article class="mini-card reveal">
+            <h3>Escalation</h3>
+            <p>Escalate early when the issue crosses boundaries such as networking, security, or vendor dependencies.</p>
+          </article>
+          <article class="mini-card reveal">
+            <h3>Documentation</h3>
+            <p>Impact, investigation, fix, prevention. Clear enough for the next engineer at 2 AM.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section section-alt">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Cloud and Support Skills</h2>
+          <p class="section-subtitle">Grouped the way recruiters and support teams evaluate cloud support readiness.</p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <h3>Cloud Platforms (AWS)</h3>
+            <p class="muted">EC2, VPC, Security Groups, NACLs, ALB, Route 53, IAM, S3, CloudWatch, CloudTrail, ACM, Auto Scaling basics</p>
+          </article>
+
+          <article class="skill-card reveal">
             <h3>Networking</h3>
-            <ul class="chips">
-              <li>DNS</li><li>TCP/IP</li><li>HTTP/HTTPS</li><li>TLS basics</li><li>Routing</li>
-              <li>Load balancer health checks</li><li>Timeouts/latency reasoning</li>
-            </ul>
-          </div>
+            <p class="muted">TCP/IP basics, DNS, HTTP/HTTPS, TLS, routing, CIDR, NAT concepts, load balancing, health checks</p>
+          </article>
 
-          <div class="card">
-            <h3>Linux & OS troubleshooting</h3>
-            <ul class="chips">
-              <li>SSH</li><li>systemd</li><li>journalctl</li><li>permissions</li><li>process/ports</li>
-              <li>log triage</li><li>disk/memory basics</li>
-            </ul>
-          </div>
+          <article class="skill-card reveal">
+            <h3>Linux and OS troubleshooting</h3>
+            <p class="muted">systemd, journalctl, permissions, disk and memory triage, service restarts, log patterns</p>
+          </article>
 
-          <div class="card">
-            <h3>Monitoring & incident operations</h3>
-            <ul class="chips">
-              <li>Alert triage</li><li>incident timelines</li><li>runbooks</li><li>RCA writing</li>
-              <li>SEV prioritization</li><li>customer updates</li><li>handoffs</li>
-            </ul>
-          </div>
+          <article class="skill-card reveal">
+            <h3>IAM and Security</h3>
+            <p class="muted">Least privilege, AccessDenied triage, policy evaluation, CloudTrail evidence, key and cert hygiene</p>
+          </article>
 
-          <div class="card">
-            <h3>IAM & security mindset</h3>
-            <ul class="chips">
-              <li>AccessDenied debugging</li><li>least privilege</li><li>trust policies</li><li>policy evaluation</li>
-              <li>audit awareness</li>
-            </ul>
-          </div>
+          <article class="skill-card reveal">
+            <h3>Monitoring and Logging</h3>
+            <p class="muted">CloudWatch metrics and alarms, log investigation, dashboards, alert triage, incident timelines</p>
+          </article>
 
-          <div class="card">
-            <h3>Tools</h3>
-            <ul class="chips">
-              <li>AWS CLI</li><li>CloudWatch Logs Insights</li><li>Git/GitHub</li><li>curl</li><li>dig/nslookup</li><li>openssl</li>
-            </ul>
-          </div>
+          <article class="skill-card reveal">
+            <h3>Support mindset</h3>
+            <p class="muted">Ticket ownership, clear updates, reproduction steps, escalation practices, runbooks, post-incident reviews</p>
+          </article>
+        </div>
+
+        <div class="tool-row reveal" aria-label="Tools used">
+          <span class="tool-chip">AWS Console</span>
+          <span class="tool-chip">AWS CLI</span>
+          <span class="tool-chip">CloudWatch</span>
+          <span class="tool-chip">CloudTrail</span>
+          <span class="tool-chip">VPC Reachability Analyzer</span>
+          <span class="tool-chip">Linux logs</span>
+          <span class="tool-chip">curl</span>
+          <span class="tool-chip">dig</span>
         </div>
       </div>
     </section>
 
-    <!-- ON-CALL -->
-    <section class="section" id="oncall">
+    <section id="oncall" class="section">
       <div class="container">
-        <div class="section-head">
-          <h2>On-call & support mindset</h2>
-          <p class="muted">How I operate during customer-impacting incidents.</p>
-        </div>
-
-        <div class="grid-3">
-          <div class="card">
-            <h3>Under pressure</h3>
-            <ul class="list">
-              <li>Stabilize first, then deep-dive</li>
-              <li>Use evidence to narrow scope quickly</li>
-              <li>Prefer reversible mitigations</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Escalation & handoffs</h3>
-            <ul class="list">
-              <li>Escalate with: impact, hypothesis, logs, next steps</li>
-              <li>Document what’s already checked</li>
-              <li>Keep comms consistent (every 15–20 mins for SEV-1)</li>
-            </ul>
-          </div>
-          <div class="card">
-            <h3>Post-incident</h3>
-            <ul class="list">
-              <li>Write a clean RCA with a timeline</li>
-              <li>Track prevention tasks (alerts, guardrails, runbooks)</li>
-              <li>Measure “repeat risk” and reduce it</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CERTS -->
-    <section class="section" id="certs">
-      <div class="container">
-        <div class="section-head">
-          <h2>Certifications & learning path</h2>
-          <p class="muted">Roadmap mindset — not just badges.</p>
+        <div class="section-heading">
+          <h2>On-call and Support Mindset</h2>
+          <p class="section-subtitle">Reliability is a habit. These are the behaviors I bring to production support.</p>
         </div>
 
         <div class="grid-2">
-          <div class="card">
-            <h3>Current</h3>
-            <ul class="list">
-              <li><strong>AWS Cloud Practitioner</strong> — planned / in progress</li>
-              <li><strong>AWS Solutions Architect Associate (SAA)</strong> — in progress</li>
-              <li><strong>Linux fundamentals</strong> — systemd, logs, permissions</li>
-              <li><strong>Networking basics</strong> — DNS, HTTP, routing</li>
+          <article class="content-card reveal">
+            <h3>Working under pressure</h3>
+            <ul class="bullets">
+              <li>Restore service first with low-risk mitigation.</li>
+              <li>Keep a clear timeline of actions and observations.</li>
+              <li>Communicate simply and consistently during SEV incidents.</li>
+              <li>Escalate early when the incident crosses domain boundaries.</li>
             </ul>
-          </div>
+          </article>
 
-          <div class="card">
-            <h3>Next 60–90 days plan</h3>
-            <ol class="list">
-              <li>Build CloudWatch dashboards + alert playbooks</li>
-              <li>Write 5 runbooks (ALB, IAM, DNS, EC2, S3)</li>
-              <li>Do 10 “incident drills” and document them</li>
-              <li>Finish SAA practice tests + weak-area reviews</li>
-            </ol>
-            <div class="muted small">
-              I’m building proof through incident documentation and operational workflows.
-            </div>
-          </div>
+          <article class="content-card reveal">
+            <h3>SLA and post-incident reviews</h3>
+            <ul class="bullets">
+              <li>Think in uptime, error budgets, and customer impact.</li>
+              <li>After resolution, write RCA with evidence, not guesses.</li>
+              <li>Add prevention actions: alarms, guardrails, and runbook updates.</li>
+              <li>Reduce repeat tickets by improving documentation and detection.</li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- ABOUT -->
-    <section class="section" id="about">
+    <section id="certs" class="section section-alt">
       <div class="container">
-        <div class="section-head">
-          <h2>About me</h2>
+        <div class="section-heading">
+          <h2>Certifications and Learning Path</h2>
+          <p class="section-subtitle">Roadmap mindset: labs, notes, and incident simulations so the knowledge becomes muscle memory.</p>
         </div>
 
-        <div class="card">
+        <div class="roadmap">
+          <article class="roadmap-item reveal">
+            <div class="roadmap-dot" aria-hidden="true"></div>
+            <div class="roadmap-content">
+              <h3>AWS Cloud Practitioner</h3>
+              <p class="muted">Core AWS services, billing, shared responsibility, and basic cloud troubleshooting.</p>
+            </div>
+          </article>
+
+          <article class="roadmap-item reveal">
+            <div class="roadmap-dot" aria-hidden="true"></div>
+            <div class="roadmap-content">
+              <h3>AWS Solutions Architect Associate (in progress)</h3>
+              <p class="muted">VPC, IAM, ALB, Route 53, monitoring patterns, and reliability fundamentals.</p>
+            </div>
+          </article>
+
+          <article class="roadmap-item reveal">
+            <div class="roadmap-dot" aria-hidden="true"></div>
+            <div class="roadmap-content">
+              <h3>Linux fundamentals and Networking basics</h3>
+              <p class="muted">Service triage with logs, DNS debugging, HTTP behavior, and real incident simulations.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="note-card reveal">
+          <p class="note-title">Proof-driven learning</p>
+          <p class="note-text">
+            I practice by building small labs and writing incident notes. The goal is to be confident on tickets from day one.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <h2>About</h2>
+          <p class="section-subtitle">Short, calm, and support-focused.</p>
+        </div>
+
+        <div class="content-card reveal">
           <p>
-            I’m a calm, reliable support engineer who enjoys diagnosing real production problems.
-            I work methodically: confirm impact, isolate the failing layer, use logs/metrics to validate,
-            mitigate safely, and then document the fix with prevention steps.
-          </p>
-          <p class="muted">
-            My goal is to join a team where I can contribute in ticket queues, on-call rotations,
-            incident response, and customer support workflows from day one.
+            I am an entry-level Cloud Support Engineer focused on troubleshooting, incident response, and clear documentation.
+            I diagnose issues across AWS, networking, and Linux, then write structured RCAs that prevent repeat incidents.
+            I work well in ticket-driven environments and stay calm during customer-impacting outages.
           </p>
         </div>
       </div>
     </section>
 
-    <!-- RESUME -->
-    <section class="section" id="resume">
+    <section id="contact" class="section section-alt">
       <div class="container">
-        <div class="section-head">
-          <h2>Resume</h2>
-          <p class="muted">Keep your resume PDF in the repo root and link it here.</p>
+        <div class="section-heading">
+          <h2>Resume and Contact</h2>
+          <p class="section-subtitle">Fastest way to reach me is email. I respond quickly and clearly.</p>
         </div>
 
-        <div class="grid-2">
-          <div class="card">
-            <h3>Download</h3>
-            <p class="muted">Replace the filename with your real resume PDF.</p>
-            <a class="btn primary" href="./Harpreet-Kaur-Resume.pdf" target="_blank" rel="noopener">Download Resume (PDF)</a>
+        <div class="contact-grid">
+          <div class="contact-card reveal">
+            <h3>Resume</h3>
+            <p class="muted">Download my resume to view experience, skills, and support-related projects.</p>
+            <a class="btn btn-primary btn-full" href="HarpreetKaurResume.pdf" download>Download Resume</a>
           </div>
-          <div class="card">
-            <h3>Profiles</h3>
-            <div class="link-list">
-              <a href="https://www.linkedin.com/in/harpreetkaur117/" target="_blank" rel="noopener" class="link-row">
-                <span>LinkedIn</span><span class="arrow">↗</span>
+
+          <div class="contact-card reveal">
+            <h3>Contact</h3>
+            <div class="contact-links" aria-label="Contact links">
+              <a class="contact-link" href="mailto:kaurpreethar1208@gmail.com">
+                <span class="contact-emoji" aria-hidden="true">📧</span>
+                <span>
+                  <span class="contact-title">Email</span>
+                  <span class="contact-sub">kaurpreethar1208@gmail.com</span>
+                </span>
               </a>
-              <a href="https://github.com/kaurharpreet116" target="_blank" rel="noopener" class="link-row">
-                <span>GitHub</span><span class="arrow">↗</span>
+
+              <a class="contact-link" href="https://www.linkedin.com/in/harpreetkaur117/" target="_blank" rel="noopener noreferrer">
+                <span class="contact-emoji" aria-hidden="true">💼</span>
+                <span>
+                  <span class="contact-title">LinkedIn</span>
+                  <span class="contact-sub">linkedin.com/in/harpreetkaur117</span>
+                </span>
               </a>
+
+              <a class="contact-link" href="https://github.com/kaurharpreet116" target="_blank" rel="noopener noreferrer">
+                <span class="contact-emoji" aria-hidden="true">🐙</span>
+                <span>
+                  <span class="contact-title">GitHub</span>
+                  <span class="contact-sub">github.com/kaurharpreet116</span>
+                </span>
+              </a>
+            </div>
+
+            <div class="availability">
+              <p class="muted"><strong>Timezone:</strong> Pacific Time</p>
+              <p class="muted"><strong>On-call:</strong> Open to rotations and customer-facing production support</p>
             </div>
           </div>
         </div>
+
+        <footer class="site-footer">
+          <div class="footer-inner">
+            <p class="footer-text">© <span id="year"></span> Harpreet Kaur. Built with HTML, CSS, and JavaScript.</p>
+            <a class="footer-link" href="#top">Back to top</a>
+          </div>
+        </footer>
       </div>
     </section>
-
-    <!-- CONTACT (NO FORM) -->
-    <section class="section" id="contact">
-      <div class="container">
-        <div class="section-head">
-          <h2>Contact</h2>
-          <p class="muted">No form. Just fast, modern contact actions.</p>
-        </div>
-
-        <div class="grid-3">
-          <div class="card contact-card">
-            <div class="contact-top">
-              <div class="contact-icon" aria-hidden="true">✉️</div>
-              <div>
-                <div class="muted small">Email</div>
-                <!-- Replace with your email -->
-                <div class="contact-value" data-copy="kaurharpreet1208@gmail.com.com">kaurharpreet1208@gmail.com.com</div>
-              </div>
-            </div>
-            <div class="contact-actions">
-              <a class="btn" href="mailto:kaurharpreet1208@gmail.com.com">Open Mail</a>
-              <button class="btn ghost copy-btn" type="button" data-copy="kaurharpreet1208@gmail.com.com">Copy</button>
-            </div>
-          </div>
-
-          <div class="card contact-card">
-            <div class="contact-top">
-              <div class="contact-icon" aria-hidden="true">📞</div>
-              <div>
-                <div class="muted small">Phone</div>
-               
-                <div class="contact-value" data-copy="+1 (209) 998-3979 >+1 (209) 998-3979</div>
-              </div>
-            </div>
-            <div class="contact-actions">
-              <a class="btn" href="tel:+1 (209) 998-3979">Call</a>
-              <button class="btn ghost copy-btn" type="button" data-copy="+1 (209) 998-3979">Copy</button>
-            </div>
-          </div>
-
-          <div class="card contact-card">
-            <div class="contact-top">
-              <div class="contact-icon" aria-hidden="true">🔗</div>
-              <div>
-                <div class="muted small">LinkedIn</div>
-                <div class="contact-value">/in/harpreetkaur117</div>
-              </div>
-            </div>
-            <div class="contact-actions">
-              <a class="btn" href="https://www.linkedin.com/in/harpreetkaur117/" target="_blank" rel="noopener">Open</a>
-              <button class="btn ghost copy-btn" type="button" data-copy="https://www.linkedin.com/in/harpreetkaur117/">Copy</button>
-            </div>
-          </div>
-        </div>
-
-        <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true">
-          Copied.
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="container footer-inner">
-        <div class="muted small">Last updated: <span id="lastUpdated"></span></div>
-        <div class="footer-links">
-          <a href="#top">Back to top</a>
-          <span class="sep">•</span>
-          <a href="#incidents">Incidents</a>
-          <span class="sep">•</span>
-          <a href="#contact">Contact</a>
-        </div>
-      </div>
-    </footer>
   </main>
 
-  <script src="./script.js"></script>
+  <div class="modal" id="incident-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-panel" role="document">
+      <div class="modal-header">
+        <div>
+          <h3 class="modal-title" id="modal-title">Incident</h3>
+          <p class="modal-subtitle" id="modal-subtitle">Category</p>
+        </div>
+        <button class="modal-close" type="button" aria-label="Close dialog" data-close="true">✕</button>
+      </div>
+
+      <div class="modal-body" id="modal-body"></div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" type="button" data-close="true">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Back to top" hidden>↑</button>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
-
